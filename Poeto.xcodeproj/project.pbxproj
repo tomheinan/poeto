@@ -14,6 +14,9 @@
 		E2626FBA2B30AF330020F59A /* PoetoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2626FB92B30AF330020F59A /* PoetoTests.swift */; };
 		E2626FC42B30AF330020F59A /* PoetoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2626FC32B30AF330020F59A /* PoetoUITests.swift */; };
 		E2626FC62B30AF330020F59A /* PoetoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2626FC52B30AF330020F59A /* PoetoUITestsLaunchTests.swift */; };
+		E27C2E3F2B30B1DF00354D74 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E3E2B30B1DF00354D74 /* KeyboardViewController.swift */; };
+		E27C2E432B30B1DF00354D74 /* Klavaro.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E27C2E3C2B30B1DF00354D74 /* Klavaro.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E27C2E4A2B30B22500354D74 /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = E27C2E492B30B22500354D74 /* KeyboardKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +34,28 @@
 			remoteGlobalIDString = E2626FA42B30AF310020F59A;
 			remoteInfo = Poeto;
 		};
+		E27C2E412B30B1DF00354D74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2626F9D2B30AF310020F59A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E27C2E3B2B30B1DE00354D74;
+			remoteInfo = Klavaro;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E27C2E442B30B1DF00354D74 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E27C2E432B30B1DF00354D74 /* Klavaro.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E2626FA52B30AF310020F59A /* Poeto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poeto.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +68,9 @@
 		E2626FBF2B30AF330020F59A /* PoetoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoetoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2626FC32B30AF330020F59A /* PoetoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetoUITests.swift; sourceTree = "<group>"; };
 		E2626FC52B30AF330020F59A /* PoetoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E27C2E3C2B30B1DF00354D74 /* Klavaro.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Klavaro.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E27C2E3E2B30B1DF00354D74 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		E27C2E402B30B1DF00354D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +95,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E27C2E392B30B1DE00354D74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E27C2E4A2B30B22500354D74 /* KeyboardKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -75,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				E2626FA72B30AF310020F59A /* Poeto */,
+				E27C2E3D2B30B1DF00354D74 /* Klavaro */,
 				E2626FB82B30AF330020F59A /* PoetoTests */,
 				E2626FC22B30AF330020F59A /* PoetoUITests */,
 				E2626FA62B30AF310020F59A /* Products */,
@@ -87,6 +123,7 @@
 				E2626FA52B30AF310020F59A /* Poeto.app */,
 				E2626FB52B30AF330020F59A /* PoetoTests.xctest */,
 				E2626FBF2B30AF330020F59A /* PoetoUITests.xctest */,
+				E27C2E3C2B30B1DF00354D74 /* Klavaro.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +164,15 @@
 			path = PoetoUITests;
 			sourceTree = "<group>";
 		};
+		E27C2E3D2B30B1DF00354D74 /* Klavaro */ = {
+			isa = PBXGroup;
+			children = (
+				E27C2E3E2B30B1DF00354D74 /* KeyboardViewController.swift */,
+				E27C2E402B30B1DF00354D74 /* Info.plist */,
+			);
+			path = Klavaro;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,10 +183,12 @@
 				E2626FA12B30AF310020F59A /* Sources */,
 				E2626FA22B30AF310020F59A /* Frameworks */,
 				E2626FA32B30AF310020F59A /* Resources */,
+				E27C2E442B30B1DF00354D74 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E27C2E422B30B1DF00354D74 /* PBXTargetDependency */,
 			);
 			name = Poeto;
 			productName = Poeto;
@@ -183,6 +231,26 @@
 			productReference = E2626FBF2B30AF330020F59A /* PoetoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		E27C2E3B2B30B1DE00354D74 /* Klavaro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E27C2E472B30B1DF00354D74 /* Build configuration list for PBXNativeTarget "Klavaro" */;
+			buildPhases = (
+				E27C2E382B30B1DE00354D74 /* Sources */,
+				E27C2E392B30B1DE00354D74 /* Frameworks */,
+				E27C2E3A2B30B1DE00354D74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Klavaro;
+			packageProductDependencies = (
+				E27C2E492B30B22500354D74 /* KeyboardKit */,
+			);
+			productName = Klavaro;
+			productReference = E27C2E3C2B30B1DF00354D74 /* Klavaro.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,6 +272,9 @@
 						CreatedOnToolsVersion = 15.1;
 						TestTargetID = E2626FA42B30AF310020F59A;
 					};
+					E27C2E3B2B30B1DE00354D74 = {
+						CreatedOnToolsVersion = 15.1;
+					};
 				};
 			};
 			buildConfigurationList = E2626FA02B30AF310020F59A /* Build configuration list for PBXProject "Poeto" */;
@@ -215,6 +286,9 @@
 				Base,
 			);
 			mainGroup = E2626F9C2B30AF310020F59A;
+			packageReferences = (
+				E27C2E482B30B22500354D74 /* XCRemoteSwiftPackageReference "KeyboardKit" */,
+			);
 			productRefGroup = E2626FA62B30AF310020F59A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -222,6 +296,7 @@
 				E2626FA42B30AF310020F59A /* Poeto */,
 				E2626FB42B30AF330020F59A /* PoetoTests */,
 				E2626FBE2B30AF330020F59A /* PoetoUITests */,
+				E27C2E3B2B30B1DE00354D74 /* Klavaro */,
 			);
 		};
 /* End PBXProject section */
@@ -244,6 +319,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E2626FBD2B30AF330020F59A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E27C2E3A2B30B1DE00354D74 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -279,6 +361,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E27C2E382B30B1DE00354D74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E27C2E3F2B30B1DF00354D74 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -291,6 +381,11 @@
 			isa = PBXTargetDependency;
 			target = E2626FA42B30AF310020F59A /* Poeto */;
 			targetProxy = E2626FC02B30AF330020F59A /* PBXContainerItemProxy */;
+		};
+		E27C2E422B30B1DF00354D74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E27C2E3B2B30B1DE00354D74 /* Klavaro */;
+			targetProxy = E27C2E412B30B1DF00354D74 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -417,6 +512,7 @@
 		E2626FCA2B30AF330020F59A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -446,6 +542,7 @@
 		E2626FCB2B30AF330020F59A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -548,6 +645,56 @@
 			};
 			name = Release;
 		};
+		E27C2E452B30B1DF00354D74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9R4AQ377X3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Klavaro/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Klavaro;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.poeto.Poeto.Klavaro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E27C2E462B30B1DF00354D74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9R4AQ377X3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Klavaro/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Klavaro;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.poeto.Poeto.Klavaro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -587,7 +734,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		E27C2E472B30B1DF00354D74 /* Build configuration list for PBXNativeTarget "Klavaro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E27C2E452B30B1DF00354D74 /* Debug */,
+				E27C2E462B30B1DF00354D74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E27C2E482B30B22500354D74 /* XCRemoteSwiftPackageReference "KeyboardKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/KeyboardKit/KeyboardKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E27C2E492B30B22500354D74 /* KeyboardKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E27C2E482B30B22500354D74 /* XCRemoteSwiftPackageReference "KeyboardKit" */;
+			productName = KeyboardKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E2626F9D2B30AF310020F59A /* Project object */;
 }
