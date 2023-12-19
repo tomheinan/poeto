@@ -8,15 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var text = "provu la klavaron ĉi tie..."
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            TextEditor(text: $text)
+                .foregroundStyle(.secondary)
+                .padding(.horizontal)
+                .navigationTitle("Poeto")
+                .typesettingLanguage(Locale.Language(identifier: "eo"))
         }
-        .padding()
     }
+    
 }
 
 #Preview {

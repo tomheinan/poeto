@@ -14,9 +14,9 @@
 		E2626FBA2B30AF330020F59A /* PoetoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2626FB92B30AF330020F59A /* PoetoTests.swift */; };
 		E2626FC42B30AF330020F59A /* PoetoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2626FC32B30AF330020F59A /* PoetoUITests.swift */; };
 		E2626FC62B30AF330020F59A /* PoetoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2626FC52B30AF330020F59A /* PoetoUITestsLaunchTests.swift */; };
-		E27C2E3F2B30B1DF00354D74 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E3E2B30B1DF00354D74 /* KeyboardViewController.swift */; };
 		E27C2E432B30B1DF00354D74 /* Klavaro.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E27C2E3C2B30B1DF00354D74 /* Klavaro.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E27C2E4A2B30B22500354D74 /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = E27C2E492B30B22500354D74 /* KeyboardKit */; };
+		E27C2E4C2B3125B300354D74 /* KeyboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E4B2B3125B300354D74 /* KeyboardController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +69,8 @@
 		E2626FC32B30AF330020F59A /* PoetoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetoUITests.swift; sourceTree = "<group>"; };
 		E2626FC52B30AF330020F59A /* PoetoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E27C2E3C2B30B1DF00354D74 /* Klavaro.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Klavaro.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		E27C2E3E2B30B1DF00354D74 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		E27C2E402B30B1DF00354D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E27C2E4B2B3125B300354D74 /* KeyboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,7 +167,7 @@
 		E27C2E3D2B30B1DF00354D74 /* Klavaro */ = {
 			isa = PBXGroup;
 			children = (
-				E27C2E3E2B30B1DF00354D74 /* KeyboardViewController.swift */,
+				E27C2E4B2B3125B300354D74 /* KeyboardController.swift */,
 				E27C2E402B30B1DF00354D74 /* Info.plist */,
 			);
 			path = Klavaro;
@@ -274,6 +274,7 @@
 					};
 					E27C2E3B2B30B1DE00354D74 = {
 						CreatedOnToolsVersion = 15.1;
+						LastSwiftMigration = 1510;
 					};
 				};
 			};
@@ -365,7 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E27C2E3F2B30B1DF00354D74 /* KeyboardViewController.swift in Sources */,
+				E27C2E4C2B3125B300354D74 /* KeyboardController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,6 +649,7 @@
 		E27C2E452B30B1DF00354D74 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9R4AQ377X3;
@@ -665,6 +667,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -673,6 +676,7 @@
 		E27C2E462B30B1DF00354D74 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9R4AQ377X3;
