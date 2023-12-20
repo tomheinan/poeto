@@ -9,18 +9,30 @@ import KeyboardKit
 
 class KeyboardController: KeyboardInputViewController {
     
-    override func viewWillSetupKeyboard() {
-        super.viewWillSetupKeyboard()
-        setup { controller in
-            SystemKeyboard(
-                state: controller.state,
-                services: controller.services,
-                buttonContent: { $0.view },
-                buttonView: { $0.view },
-                emojiKeyboard: { $0.view },
-                toolbar: { $0.view }
-            )
+    var diacriticState: DiacriticState = .disabled {
+        didSet {
+            print("hi")
         }
+    }
+    
+    override func viewDidLoad() {
+        services.layoutProvider = LayoutProvider(alphabeticInputSet: .esperanto(withDiacritics: false), numericInputSet: .standardNumeric(currency: "$"), symbolicInputSet: .standardSymbolic(currencies: ["$"]))
+        services.styleProvider = StyleProvider(keyboardContext: state.keyboardContext)
+        services.actionHandler = ActionHandler(controller: self)
+        diacriticState = .enabled
+    }
+    
+    override func insertText(_ text: String) {
+        switch diacriticState {
+        case .enabled:
+            super.insertText(text.asDiacriticalEquivalent())
+        default:
+            super.insertText(text)
+        }
+    }
+    
+    func toggleDiacritics() {
+        
     }
     
 }
