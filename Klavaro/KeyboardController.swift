@@ -6,33 +6,57 @@
 //
 
 import KeyboardKit
+import SwiftUI
 
 class KeyboardController: KeyboardInputViewController {
     
-    var diacriticState: DiacriticState = .disabled {
-        didSet {
-            print("hi")
+    //@State var enableDiacritics = false
+    var diacritics = Diacritics()
+    
+    override func viewDidLoad() {
+        services.layoutProvider = LayoutProvider(alphabeticInputSet: .esperanto, numericInputSet: .standardNumeric(currency: "$"), symbolicInputSet: .standardSymbolic(currencies: ["$"]))
+        services.styleProvider = StyleProvider(keyboardContext: state.keyboardContext, diacritics: diacritics)
+        services.actionHandler = ActionHandler(controller: self)
+        services.calloutActionProvider = StandardCalloutActionProvider(keyboardContext: state.keyboardContext, baseProvider: CalloutActionProvider())
+    }
+    
+    override func viewWillSetupKeyboard() {
+        super.viewWillSetupKeyboard()
+
+        setup { controller in
+            SystemKeyboard(
+                state: controller.state,
+                services: controller.services,
+                buttonContent: { params in
+                    switch params.item.action {
+                    case .character(let character):
+                        if character != character.asDiacriticalEquivalent() {
+                            KeyboardButton.CustomContent(action: params.item.action, styleProvider: self.services.styleProvider, keyboardContext: self.state.keyboardContext, diacritics: self.diacritics)
+                        } else {
+                            params.view
+                        }
+                    default:
+                        params.view
+                    }
+                },
+                buttonView: { $0.view },
+                emojiKeyboard: { $0.view },
+                toolbar: { $0.view }
+            )
         }
     }
     
-    override func viewDidLoad() {
-        services.layoutProvider = LayoutProvider(alphabeticInputSet: .esperanto(withDiacritics: false), numericInputSet: .standardNumeric(currency: "$"), symbolicInputSet: .standardSymbolic(currencies: ["$"]))
-        services.styleProvider = StyleProvider(keyboardContext: state.keyboardContext)
-        services.actionHandler = ActionHandler(controller: self)
-        diacriticState = .enabled
-    }
-    
     override func insertText(_ text: String) {
-        switch diacriticState {
-        case .enabled:
+        if diacritics.enabled {
             super.insertText(text.asDiacriticalEquivalent())
-        default:
+            diacritics.enabled = false
+        } else {
             super.insertText(text)
         }
     }
     
     func toggleDiacritics() {
-        
+        diacritics.enabled.toggle()
     }
     
 }

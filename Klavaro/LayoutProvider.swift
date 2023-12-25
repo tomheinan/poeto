@@ -14,6 +14,7 @@ class LayoutProvider: InputSetBasedKeyboardLayoutProvider {
         let layout = super.keyboardLayout(for: context)
         layout.tryInsertLocaleSwitcher(for: context)
         layout.tryInsertDiacriticsButton()
+        
         return layout
     }
     
@@ -28,15 +29,21 @@ private extension KeyboardLayout {
     }
     
     func tryInsertDiacriticsButton() {
-        var firstRow = itemRows[0]
+        let firstRow = itemRows[0]
         let thirdRow = itemRows[2]
-        let nextKey = firstRow[0]
+        guard let nextKey = firstRow.first else { return }
         guard let shiftKey = thirdRow.first else { return }
         
         let size = KeyboardLayout.ItemSize(width: shiftKey.size.width, height: nextKey.size.height)
-        let diacriticsKey = KeyboardLayout.Item(action: Constants.Actions.toggleDiacritics, size: size, edgeInsets: shiftKey.edgeInsets)
-        firstRow.insert(diacriticsKey, at: 0)
-        itemRows[0] = firstRow
+        let toggleDiacriticsKey = KeyboardLayout.Item(action: Constants.Actions.toggleDiacritics, size: size, edgeInsets: shiftKey.edgeInsets)
+        
+        itemRows.insert(toggleDiacriticsKey, before: .character("e"), atRow: 0)
+        itemRows.insert(KeyboardLayout.Item(action: .none, size: ItemSize(width: .available, height: 0)), before: .character("e"), atRow: 0)
+        itemRows.insert(KeyboardLayout.Item(action: .none, size: ItemSize(width: .available, height: 0)), after: .character("p"), atRow: 0)
+        
+        itemRows.insert(toggleDiacriticsKey, before: .character("E"), atRow: 0)
+        itemRows.insert(KeyboardLayout.Item(action: .none, size: ItemSize(width: .available, height: 0)), before: .character("E"), atRow: 0)
+        itemRows.insert(KeyboardLayout.Item(action: .none, size: ItemSize(width: .available, height: 0)), after: .character("P"), atRow: 0)
     }
     
 }

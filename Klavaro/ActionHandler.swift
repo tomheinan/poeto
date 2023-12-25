@@ -9,15 +9,18 @@ import KeyboardKit
 
 class ActionHandler: StandardKeyboardActionHandler {
     
-    override func action(for gesture: Gestures.KeyboardGesture, on action: KeyboardAction) -> KeyboardAction.GestureAction? {
-        let standard = super.action(for: gesture, on: action)
-        if action == Constants.Actions.toggleDiacritics && gesture == .release {
-            guard let controller = keyboardController as? KeyboardController else { return nil }
-            controller.insertText(" [\(gesture.rawValue)] ")
-            return nil
+    override func handle(_ gesture: Gesture, on action: KeyboardAction) {
+        super.handle(gesture, on: action)
+        
+        guard gesture == .release, let controller = keyboardController as? KeyboardController else { return }
+        
+        switch action {
+        case Constants.Actions.toggleDiacritics:
+            controller.toggleDiacritics()
+        default:
+            return
         }
         
-        return standard
     }
     
 }

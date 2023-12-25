@@ -22,9 +22,12 @@
 		E27C2E552B31471100354D74 /* LayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E542B31471100354D74 /* LayoutProvider.swift */; };
 		E27C2E572B314CE800354D74 /* StyleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E562B314CE800354D74 /* StyleProvider.swift */; };
 		E27C2E592B3216A200354D74 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E582B3216A200354D74 /* Constants.swift */; };
-		E27C2E5B2B322F2B00354D74 /* DiacriticState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E5A2B322F2B00354D74 /* DiacriticState.swift */; };
 		E27C2E5D2B3232EA00354D74 /* String+AsDiacriticalEquivalent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E5C2B3232EA00354D74 /* String+AsDiacriticalEquivalent.swift */; };
 		E27C2E5F2B3236BB00354D74 /* ActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E5E2B3236BB00354D74 /* ActionHandler.swift */; };
+		E27C2E632B35EFC300354D74 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E27C2E622B35EFC300354D74 /* Media.xcassets */; };
+		E27C2E652B391D9700354D74 /* KeyboardButton+CustomContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E642B391D9700354D74 /* KeyboardButton+CustomContent.swift */; };
+		E27C2E692B39301300354D74 /* Diacritics.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E682B39301300354D74 /* Diacritics.swift */; };
+		E27C2E6D2B3A230200354D74 /* CalloutActionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E6C2B3A230200354D74 /* CalloutActionProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,9 +86,12 @@
 		E27C2E542B31471100354D74 /* LayoutProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutProvider.swift; sourceTree = "<group>"; };
 		E27C2E562B314CE800354D74 /* StyleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleProvider.swift; sourceTree = "<group>"; };
 		E27C2E582B3216A200354D74 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		E27C2E5A2B322F2B00354D74 /* DiacriticState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiacriticState.swift; sourceTree = "<group>"; };
 		E27C2E5C2B3232EA00354D74 /* String+AsDiacriticalEquivalent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AsDiacriticalEquivalent.swift"; sourceTree = "<group>"; };
 		E27C2E5E2B3236BB00354D74 /* ActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionHandler.swift; sourceTree = "<group>"; };
+		E27C2E622B35EFC300354D74 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		E27C2E642B391D9700354D74 /* KeyboardButton+CustomContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardButton+CustomContent.swift"; sourceTree = "<group>"; };
+		E27C2E682B39301300354D74 /* Diacritics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diacritics.swift; sourceTree = "<group>"; };
+		E27C2E6C2B3A230200354D74 /* CalloutActionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalloutActionProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,11 +194,12 @@
 				E27C2E542B31471100354D74 /* LayoutProvider.swift */,
 				E27C2E562B314CE800354D74 /* StyleProvider.swift */,
 				E27C2E5E2B3236BB00354D74 /* ActionHandler.swift */,
-				E27C2E522B3141D700354D74 /* InputSet+Esperanto.swift */,
-				E27C2E5C2B3232EA00354D74 /* String+AsDiacriticalEquivalent.swift */,
+				E27C2E6C2B3A230200354D74 /* CalloutActionProvider.swift */,
+				E27C2E682B39301300354D74 /* Diacritics.swift */,
 				E27C2E582B3216A200354D74 /* Constants.swift */,
+				E27C2E6E2B3A233E00354D74 /* Extensions */,
+				E27C2E622B35EFC300354D74 /* Media.xcassets */,
 				E27C2E402B30B1DF00354D74 /* Info.plist */,
-				E27C2E5A2B322F2B00354D74 /* DiacriticState.swift */,
 			);
 			path = Klavaro;
 			sourceTree = "<group>";
@@ -202,6 +209,16 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E27C2E6E2B3A233E00354D74 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E27C2E522B3141D700354D74 /* InputSet+Esperanto.swift */,
+				E27C2E5C2B3232EA00354D74 /* String+AsDiacriticalEquivalent.swift */,
+				E27C2E642B391D9700354D74 /* KeyboardButton+CustomContent.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,6 +381,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E27C2E632B35EFC300354D74 /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,12 +418,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E27C2E5B2B322F2B00354D74 /* DiacriticState.swift in Sources */,
 				E27C2E592B3216A200354D74 /* Constants.swift in Sources */,
 				E27C2E5F2B3236BB00354D74 /* ActionHandler.swift in Sources */,
 				E27C2E552B31471100354D74 /* LayoutProvider.swift in Sources */,
+				E27C2E6D2B3A230200354D74 /* CalloutActionProvider.swift in Sources */,
+				E27C2E652B391D9700354D74 /* KeyboardButton+CustomContent.swift in Sources */,
 				E27C2E4C2B3125B300354D74 /* KeyboardController.swift in Sources */,
 				E27C2E572B314CE800354D74 /* StyleProvider.swift in Sources */,
+				E27C2E692B39301300354D74 /* Diacritics.swift in Sources */,
 				E27C2E5D2B3232EA00354D74 /* String+AsDiacriticalEquivalent.swift in Sources */,
 				E27C2E532B3141D700354D74 /* InputSet+Esperanto.swift in Sources */,
 			);
