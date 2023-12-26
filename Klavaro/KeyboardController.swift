@@ -10,14 +10,16 @@ import SwiftUI
 
 class KeyboardController: KeyboardInputViewController {
     
-    //@State var enableDiacritics = false
     var diacritics = Diacritics()
     
     override func viewDidLoad() {
         services.layoutProvider = LayoutProvider(alphabeticInputSet: .esperanto, numericInputSet: .standardNumeric(currency: "$"), symbolicInputSet: .standardSymbolic(currencies: ["$"]))
         services.styleProvider = StyleProvider(keyboardContext: state.keyboardContext, diacritics: diacritics)
-        services.actionHandler = ActionHandler(controller: self)
+        services.actionHandler = ActionHandler(controller: self, keyboardContext: state.keyboardContext, keyboardBehavior: services.keyboardBehavior, autocompleteContext: state.autocompleteContext, feedbackConfiguration: state.feedbackConfiguration, spaceDragGestureHandler: services.spaceDragGestureHandler)
         services.calloutActionProvider = StandardCalloutActionProvider(keyboardContext: state.keyboardContext, baseProvider: CalloutActionProvider())
+        services.autocompleteProvider = EsperantoAutocompleteProvider(
+            context: state.autocompleteContext
+        )
     }
     
     override func viewWillSetupKeyboard() {
@@ -31,7 +33,7 @@ class KeyboardController: KeyboardInputViewController {
                     switch params.item.action {
                     case .character(let character):
                         if character != character.asDiacriticalEquivalent() {
-                            KeyboardButton.CustomContent(action: params.item.action, styleProvider: self.services.styleProvider, keyboardContext: self.state.keyboardContext, diacritics: self.diacritics)
+                            KeyboardButton.CustomContent(action: params.item.action, styleProvider: self.services.styleProvider)
                         } else {
                             params.view
                         }

@@ -12,7 +12,6 @@ class LayoutProvider: InputSetBasedKeyboardLayoutProvider {
 
     override func keyboardLayout(for context: KeyboardContext) -> KeyboardLayout {
         let layout = super.keyboardLayout(for: context)
-        layout.tryInsertLocaleSwitcher(for: context)
         layout.tryInsertDiacriticsButton()
         
         return layout
@@ -21,12 +20,6 @@ class LayoutProvider: InputSetBasedKeyboardLayoutProvider {
 }
 
 private extension KeyboardLayout {
-    
-    func tryInsertLocaleSwitcher(for context: KeyboardContext) {
-        guard context.hasMultipleLocales else { return }
-        guard let button = tryCreateBottomRowItem(for:  .nextLocale) else { return }
-        itemRows.insert(button, after: .space, atRow: bottomRowIndex)
-    }
     
     func tryInsertDiacriticsButton() {
         let firstRow = itemRows[0]

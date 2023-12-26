@@ -12,17 +12,13 @@ extension KeyboardButton {
 
     struct CustomContent: View {
 
-        public init(action: KeyboardAction, styleProvider: KeyboardStyleProvider, keyboardContext: KeyboardContext, diacritics: Diacritics) {
+        public init(action: KeyboardAction, styleProvider: KeyboardStyleProvider) {
             self.action = action
             self.styleProvider = styleProvider
-            self.keyboardContext = keyboardContext
-            self.diacritics = diacritics
         }
         
         private let action: KeyboardAction
         private let styleProvider: KeyboardStyleProvider
-        private let keyboardContext: KeyboardContext
-        var diacritics: Diacritics
         
         public var body: some View {
             bodyContent
@@ -45,7 +41,7 @@ private extension KeyboardButton.CustomContent {
     
     func textView(for action: KeyboardAction, text: String) -> some View {
         ZStack {
-            if diacritics.enabled {
+            if let styleProvider = styleProvider as? StyleProvider, styleProvider.diacritics.enabled {
                 KeyboardButton.Title(
                     text: text.asDiacriticalEquivalent(),
                     action: action

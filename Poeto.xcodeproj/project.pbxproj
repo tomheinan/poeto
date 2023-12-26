@@ -28,6 +28,7 @@
 		E27C2E652B391D9700354D74 /* KeyboardButton+CustomContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E642B391D9700354D74 /* KeyboardButton+CustomContent.swift */; };
 		E27C2E692B39301300354D74 /* Diacritics.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E682B39301300354D74 /* Diacritics.swift */; };
 		E27C2E6D2B3A230200354D74 /* CalloutActionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E6C2B3A230200354D74 /* CalloutActionProvider.swift */; };
+		E27C2E702B3A306300354D74 /* EsperantoAutocompleteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E6F2B3A306300354D74 /* EsperantoAutocompleteProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		E27C2E642B391D9700354D74 /* KeyboardButton+CustomContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardButton+CustomContent.swift"; sourceTree = "<group>"; };
 		E27C2E682B39301300354D74 /* Diacritics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diacritics.swift; sourceTree = "<group>"; };
 		E27C2E6C2B3A230200354D74 /* CalloutActionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalloutActionProvider.swift; sourceTree = "<group>"; };
+		E27C2E6F2B3A306300354D74 /* EsperantoAutocompleteProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsperantoAutocompleteProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,12 +193,10 @@
 			isa = PBXGroup;
 			children = (
 				E27C2E4B2B3125B300354D74 /* KeyboardController.swift */,
-				E27C2E542B31471100354D74 /* LayoutProvider.swift */,
-				E27C2E562B314CE800354D74 /* StyleProvider.swift */,
-				E27C2E5E2B3236BB00354D74 /* ActionHandler.swift */,
-				E27C2E6C2B3A230200354D74 /* CalloutActionProvider.swift */,
 				E27C2E682B39301300354D74 /* Diacritics.swift */,
 				E27C2E582B3216A200354D74 /* Constants.swift */,
+				E27C2E712B3A308A00354D74 /* Providers */,
+				E27C2E722B3A309B00354D74 /* Handlers */,
 				E27C2E6E2B3A233E00354D74 /* Extensions */,
 				E27C2E622B35EFC300354D74 /* Media.xcassets */,
 				E27C2E402B30B1DF00354D74 /* Info.plist */,
@@ -219,6 +219,25 @@
 				E27C2E642B391D9700354D74 /* KeyboardButton+CustomContent.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E27C2E712B3A308A00354D74 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				E27C2E542B31471100354D74 /* LayoutProvider.swift */,
+				E27C2E562B314CE800354D74 /* StyleProvider.swift */,
+				E27C2E6C2B3A230200354D74 /* CalloutActionProvider.swift */,
+				E27C2E6F2B3A306300354D74 /* EsperantoAutocompleteProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		E27C2E722B3A309B00354D74 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				E27C2E5E2B3236BB00354D74 /* ActionHandler.swift */,
+			);
+			path = Handlers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,6 +440,7 @@
 				E27C2E592B3216A200354D74 /* Constants.swift in Sources */,
 				E27C2E5F2B3236BB00354D74 /* ActionHandler.swift in Sources */,
 				E27C2E552B31471100354D74 /* LayoutProvider.swift in Sources */,
+				E27C2E702B3A306300354D74 /* EsperantoAutocompleteProvider.swift in Sources */,
 				E27C2E6D2B3A230200354D74 /* CalloutActionProvider.swift in Sources */,
 				E27C2E652B391D9700354D74 /* KeyboardButton+CustomContent.swift in Sources */,
 				E27C2E4C2B3125B300354D74 /* KeyboardController.swift in Sources */,
