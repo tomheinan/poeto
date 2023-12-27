@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		E21944492B3C938100D63851 /* KeyboardAction+EsperantoLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21944482B3C938100D63851 /* KeyboardAction+EsperantoLocalization.swift */; };
 		E219444B2B3C9BFE00D63851 /* ReturnKeyType+EsperantoLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219444A2B3C9BFE00D63851 /* ReturnKeyType+EsperantoLocalization.swift */; };
+		E2579A752B3CBCDB002C853E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2579A742B3CBCDB002C853E /* GoogleService-Info.plist */; };
+		E2579A762B3CBCDB002C853E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2579A742B3CBCDB002C853E /* GoogleService-Info.plist */; };
+		E2579A772B3CBCDB002C853E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2579A742B3CBCDB002C853E /* GoogleService-Info.plist */; };
+		E2579A7A2B3CBE84002C853E /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = E2579A792B3CBE84002C853E /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		E2579A7C2B3CBE84002C853E /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = E2579A7B2B3CBE84002C853E /* FirebaseCrashlytics */; };
 		E2626FA92B30AF310020F59A /* PoetoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2626FA82B30AF310020F59A /* PoetoApp.swift */; };
 		E2626FAB2B30AF310020F59A /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2626FAA2B30AF310020F59A /* HomeScreen.swift */; };
 		E2626FAD2B30AF330020F59A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2626FAC2B30AF330020F59A /* Assets.xcassets */; };
@@ -74,6 +79,7 @@
 /* Begin PBXFileReference section */
 		E21944482B3C938100D63851 /* KeyboardAction+EsperantoLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardAction+EsperantoLocalization.swift"; sourceTree = "<group>"; };
 		E219444A2B3C9BFE00D63851 /* ReturnKeyType+EsperantoLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReturnKeyType+EsperantoLocalization.swift"; sourceTree = "<group>"; };
+		E2579A742B3CBCDB002C853E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E2626FA52B30AF310020F59A /* Poeto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poeto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2626FA82B30AF310020F59A /* PoetoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetoApp.swift; sourceTree = "<group>"; };
 		E2626FAA2B30AF310020F59A /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -105,7 +111,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2579A7C2B3CBE84002C853E /* FirebaseCrashlytics in Frameworks */,
 				E27C2E512B313D5000354D74 /* KeyboardKit in Frameworks */,
+				E2579A7A2B3CBE84002C853E /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +171,7 @@
 				E2626FA82B30AF310020F59A /* PoetoApp.swift */,
 				E2626FAA2B30AF310020F59A /* HomeScreen.swift */,
 				E2626FAC2B30AF330020F59A /* Assets.xcassets */,
+				E2579A742B3CBCDB002C853E /* GoogleService-Info.plist */,
 				E2626FAE2B30AF330020F59A /* Preview Content */,
 			);
 			path = Poeto;
@@ -266,6 +275,8 @@
 			name = Poeto;
 			packageProductDependencies = (
 				E27C2E502B313D5000354D74 /* KeyboardKit */,
+				E2579A792B3CBE84002C853E /* FirebaseAnalyticsWithoutAdIdSupport */,
+				E2579A7B2B3CBE84002C853E /* FirebaseCrashlytics */,
 			);
 			productName = Poeto;
 			productReference = E2626FA52B30AF310020F59A /* Poeto.app */;
@@ -365,6 +376,7 @@
 			mainGroup = E2626F9C2B30AF310020F59A;
 			packageReferences = (
 				E27C2E482B30B22500354D74 /* XCRemoteSwiftPackageReference "KeyboardKit" */,
+				E2579A782B3CBE84002C853E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = E2626FA62B30AF310020F59A /* Products */;
 			projectDirPath = "";
@@ -385,6 +397,7 @@
 			files = (
 				E2626FB02B30AF330020F59A /* Preview Assets.xcassets in Resources */,
 				E2626FAD2B30AF330020F59A /* Assets.xcassets in Resources */,
+				E2579A752B3CBCDB002C853E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +405,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2579A762B3CBCDB002C853E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +413,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2579A772B3CBCDB002C853E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -839,6 +854,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E2579A782B3CBE84002C853E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.19.1;
+			};
+		};
 		E27C2E482B30B22500354D74 /* XCRemoteSwiftPackageReference "KeyboardKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/KeyboardKit/KeyboardKit.git";
@@ -850,6 +873,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E2579A792B3CBE84002C853E /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2579A782B3CBE84002C853E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		E2579A7B2B3CBE84002C853E /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2579A782B3CBE84002C853E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
 		E27C2E492B30B22500354D74 /* KeyboardKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E27C2E482B30B22500354D74 /* XCRemoteSwiftPackageReference "KeyboardKit" */;

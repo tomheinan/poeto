@@ -8,10 +8,6 @@
 import Foundation
 import KeyboardKit
 
-/**
- This fake autocomplete provider is used in the non-pro demo,
- to show fake suggestions while typing.
- */
 class EsperantoAutocompleteProvider: AutocompleteProvider {
 
     init(context: AutocompleteContext) {

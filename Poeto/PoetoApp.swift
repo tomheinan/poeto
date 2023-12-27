@@ -6,12 +6,23 @@
 //
 
 import SwiftUI
+import FirebaseCore
 
 @main
 struct PoetoApp: App {
+    
+    @Environment(\.scenePhase) private var scenePhase
+    
     var body: some Scene {
         WindowGroup {
             HomeScreen()
         }
+        .onChange(of: scenePhase) { _, newValue in
+            if newValue == .active {
+                FirebaseApp.configure()
+            }
+        }
     }
+    
+    
 }
