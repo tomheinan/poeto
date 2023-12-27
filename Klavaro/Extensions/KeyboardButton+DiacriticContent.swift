@@ -10,7 +10,7 @@ import SwiftUI
 
 extension KeyboardButton {
 
-    struct CustomContent: View {
+    struct DiacriticContent: View {
 
         public init(action: KeyboardAction, styleProvider: KeyboardStyleProvider) {
             self.action = action
@@ -28,7 +28,7 @@ extension KeyboardButton {
     }
 }
 
-private extension KeyboardButton.CustomContent {
+private extension KeyboardButton.DiacriticContent {
 
     @ViewBuilder
     var bodyContent: some View {

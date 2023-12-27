@@ -35,10 +35,14 @@ class KeyboardController: KeyboardInputViewController {
                     switch params.item.action {
                     case .character(let character):
                         if character != character.asDiacriticalEquivalent() {
-                            KeyboardButton.CustomContent(action: params.item.action, styleProvider: sp)
+                            KeyboardButton.DiacriticContent(action: params.item.action, styleProvider: sp)
                         } else {
                             params.view
                         }
+                    case .space:
+                        KeyboardButton.SpaceContent(localeText: "Esperanto", spaceView: KeyboardButton.Title(text: params.item.action.esperantoLocalization ?? "␣", action: .space))
+                    case .primary(let returnKeyType):
+                        KeyboardButton.Title(text: returnKeyType.esperantoLocalization, action: params.item.action)
                     default:
                         params.view
                     }

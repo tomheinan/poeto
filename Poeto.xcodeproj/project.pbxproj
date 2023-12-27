@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E21944492B3C938100D63851 /* KeyboardAction+EsperantoLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21944482B3C938100D63851 /* KeyboardAction+EsperantoLocalization.swift */; };
+		E219444B2B3C9BFE00D63851 /* ReturnKeyType+EsperantoLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219444A2B3C9BFE00D63851 /* ReturnKeyType+EsperantoLocalization.swift */; };
 		E2626FA92B30AF310020F59A /* PoetoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2626FA82B30AF310020F59A /* PoetoApp.swift */; };
 		E2626FAB2B30AF310020F59A /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2626FAA2B30AF310020F59A /* HomeScreen.swift */; };
 		E2626FAD2B30AF330020F59A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2626FAC2B30AF330020F59A /* Assets.xcassets */; };
@@ -25,7 +27,7 @@
 		E27C2E5D2B3232EA00354D74 /* String+AsDiacriticalEquivalent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E5C2B3232EA00354D74 /* String+AsDiacriticalEquivalent.swift */; };
 		E27C2E5F2B3236BB00354D74 /* ActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E5E2B3236BB00354D74 /* ActionHandler.swift */; };
 		E27C2E632B35EFC300354D74 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E27C2E622B35EFC300354D74 /* Media.xcassets */; };
-		E27C2E652B391D9700354D74 /* KeyboardButton+CustomContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E642B391D9700354D74 /* KeyboardButton+CustomContent.swift */; };
+		E27C2E652B391D9700354D74 /* KeyboardButton+DiacriticContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E642B391D9700354D74 /* KeyboardButton+DiacriticContent.swift */; };
 		E27C2E692B39301300354D74 /* Diacritics.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E682B39301300354D74 /* Diacritics.swift */; };
 		E27C2E6D2B3A230200354D74 /* CalloutActionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E6C2B3A230200354D74 /* CalloutActionProvider.swift */; };
 		E27C2E702B3A306300354D74 /* EsperantoAutocompleteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E6F2B3A306300354D74 /* EsperantoAutocompleteProvider.swift */; };
@@ -70,6 +72,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E21944482B3C938100D63851 /* KeyboardAction+EsperantoLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardAction+EsperantoLocalization.swift"; sourceTree = "<group>"; };
+		E219444A2B3C9BFE00D63851 /* ReturnKeyType+EsperantoLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReturnKeyType+EsperantoLocalization.swift"; sourceTree = "<group>"; };
 		E2626FA52B30AF310020F59A /* Poeto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poeto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2626FA82B30AF310020F59A /* PoetoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetoApp.swift; sourceTree = "<group>"; };
 		E2626FAA2B30AF310020F59A /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -90,7 +94,7 @@
 		E27C2E5C2B3232EA00354D74 /* String+AsDiacriticalEquivalent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AsDiacriticalEquivalent.swift"; sourceTree = "<group>"; };
 		E27C2E5E2B3236BB00354D74 /* ActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionHandler.swift; sourceTree = "<group>"; };
 		E27C2E622B35EFC300354D74 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-		E27C2E642B391D9700354D74 /* KeyboardButton+CustomContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardButton+CustomContent.swift"; sourceTree = "<group>"; };
+		E27C2E642B391D9700354D74 /* KeyboardButton+DiacriticContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardButton+DiacriticContent.swift"; sourceTree = "<group>"; };
 		E27C2E682B39301300354D74 /* Diacritics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diacritics.swift; sourceTree = "<group>"; };
 		E27C2E6C2B3A230200354D74 /* CalloutActionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalloutActionProvider.swift; sourceTree = "<group>"; };
 		E27C2E6F2B3A306300354D74 /* EsperantoAutocompleteProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsperantoAutocompleteProvider.swift; sourceTree = "<group>"; };
@@ -216,7 +220,9 @@
 			children = (
 				E27C2E522B3141D700354D74 /* InputSet+Esperanto.swift */,
 				E27C2E5C2B3232EA00354D74 /* String+AsDiacriticalEquivalent.swift */,
-				E27C2E642B391D9700354D74 /* KeyboardButton+CustomContent.swift */,
+				E27C2E642B391D9700354D74 /* KeyboardButton+DiacriticContent.swift */,
+				E21944482B3C938100D63851 /* KeyboardAction+EsperantoLocalization.swift */,
+				E219444A2B3C9BFE00D63851 /* ReturnKeyType+EsperantoLocalization.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -438,11 +444,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E27C2E592B3216A200354D74 /* Constants.swift in Sources */,
+				E21944492B3C938100D63851 /* KeyboardAction+EsperantoLocalization.swift in Sources */,
+				E219444B2B3C9BFE00D63851 /* ReturnKeyType+EsperantoLocalization.swift in Sources */,
 				E27C2E5F2B3236BB00354D74 /* ActionHandler.swift in Sources */,
 				E27C2E552B31471100354D74 /* LayoutProvider.swift in Sources */,
 				E27C2E702B3A306300354D74 /* EsperantoAutocompleteProvider.swift in Sources */,
 				E27C2E6D2B3A230200354D74 /* CalloutActionProvider.swift in Sources */,
-				E27C2E652B391D9700354D74 /* KeyboardButton+CustomContent.swift in Sources */,
+				E27C2E652B391D9700354D74 /* KeyboardButton+DiacriticContent.swift in Sources */,
 				E27C2E4C2B3125B300354D74 /* KeyboardController.swift in Sources */,
 				E27C2E572B314CE800354D74 /* StyleProvider.swift in Sources */,
 				E27C2E692B39301300354D74 /* Diacritics.swift in Sources */,
