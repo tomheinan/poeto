@@ -18,20 +18,6 @@ class StyleProvider: StandardKeyboardStyleProvider {
         super.init(keyboardContext: keyboardContext)
     }
     
-//    override func buttonStyle(for action: KeyboardAction, isPressed: Bool) -> KeyboardStyle.Button {
-//        if action == Constants.Actions.toggleDiacritics {
-//            return super.buttonStyle(for: .backspace, isPressed: isPressed)
-//        }
-//        return super.buttonStyle(for: action, isPressed: isPressed)
-//    }
-    
-//    override var keyboardEdgeInsets: EdgeInsets {
-//        switch keyboardContext.deviceType {
-//        case .pad: return .init(top: 0, leading: 0, bottom: 4, trailing: 100)
-//        default: return super.keyboardEdgeInsets
-//        }
-//    }
-    
     override func buttonBackgroundColor(for action: KeyboardAction, isPressed: Bool) -> Color {
         switch isPressed {
         case false:
@@ -82,16 +68,4 @@ class StyleProvider: StandardKeyboardStyleProvider {
         return super.buttonImageScaleFactor(for: action)
     }
 
-    // override var actionCalloutStyle: ActionCalloutStyle {
-    //     var style = super.actionCalloutStyle()
-    //     style.callout.backgroundColor = .red
-    //     return style
-    // }
-
-    // override var inputCalloutStyle: InputCalloutStyle {
-    //     var style = super.inputCalloutStyle()
-    //     style.callout.backgroundColor = .blue
-    //     style.callout.textColor = .yellow
-    //     return style
-    // }
 }

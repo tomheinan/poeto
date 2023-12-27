@@ -24,6 +24,8 @@ class KeyboardController: KeyboardInputViewController {
     
     override func viewWillSetupKeyboard() {
         super.viewWillSetupKeyboard()
+        
+        let sp = services.styleProvider
 
         setup { controller in
             SystemKeyboard(
@@ -33,7 +35,7 @@ class KeyboardController: KeyboardInputViewController {
                     switch params.item.action {
                     case .character(let character):
                         if character != character.asDiacriticalEquivalent() {
-                            KeyboardButton.CustomContent(action: params.item.action, styleProvider: self.services.styleProvider)
+                            KeyboardButton.CustomContent(action: params.item.action, styleProvider: sp)
                         } else {
                             params.view
                         }
