@@ -14,6 +14,7 @@
 		E2579A772B3CBCDB002C853E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2579A742B3CBCDB002C853E /* GoogleService-Info.plist */; };
 		E2579A7A2B3CBE84002C853E /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = E2579A792B3CBE84002C853E /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		E2579A7C2B3CBE84002C853E /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = E2579A7B2B3CBE84002C853E /* FirebaseCrashlytics */; };
+		E2579A7E2B3CC2AA002C853E /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E2579A7D2B3CC2AA002C853E /* FirebaseAnalyticsSwift */; };
 		E2626FA92B30AF310020F59A /* PoetoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2626FA82B30AF310020F59A /* PoetoApp.swift */; };
 		E2626FAB2B30AF310020F59A /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2626FAA2B30AF310020F59A /* HomeScreen.swift */; };
 		E2626FAD2B30AF330020F59A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2626FAC2B30AF330020F59A /* Assets.xcassets */; };
@@ -111,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2579A7E2B3CC2AA002C853E /* FirebaseAnalyticsSwift in Frameworks */,
 				E2579A7C2B3CBE84002C853E /* FirebaseCrashlytics in Frameworks */,
 				E27C2E512B313D5000354D74 /* KeyboardKit in Frameworks */,
 				E2579A7A2B3CBE84002C853E /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
@@ -277,6 +279,7 @@
 				E27C2E502B313D5000354D74 /* KeyboardKit */,
 				E2579A792B3CBE84002C853E /* FirebaseAnalyticsWithoutAdIdSupport */,
 				E2579A7B2B3CBE84002C853E /* FirebaseCrashlytics */,
+				E2579A7D2B3CC2AA002C853E /* FirebaseAnalyticsSwift */,
 			);
 			productName = Poeto;
 			productReference = E2626FA52B30AF310020F59A /* Poeto.app */;
@@ -882,6 +885,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E2579A782B3CBE84002C853E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
+		};
+		E2579A7D2B3CC2AA002C853E /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2579A782B3CBE84002C853E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
 		};
 		E27C2E492B30B22500354D74 /* KeyboardKit */ = {
 			isa = XCSwiftPackageProductDependency;

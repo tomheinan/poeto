@@ -7,6 +7,7 @@
 
 import KeyboardKit
 import SwiftUI
+import FirebaseAnalytics
 
 struct HomeScreen: View {
 
@@ -32,9 +33,12 @@ struct HomeScreen: View {
             }
             .buttonStyle(.plain)
             .navigationTitle("Poeto")
-            .onChange(of: isAppearanceDark) { newValue in
+            .onChange(of: isAppearanceDark) { _, newValue in
                 appearance = isAppearanceDark ? .dark : .light
             }
+            .onAppear(perform: {
+                Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: "HomeScreen", AnalyticsParameterScreenClass: "HomeScreen"])
+            })
         }
         .navigationViewStyle(.stack)
     }
