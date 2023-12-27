@@ -13,13 +13,13 @@ class KeyboardController: KeyboardInputViewController {
     var diacritics = Diacritics()
     
     override func viewDidLoad() {
+        services.actionHandler = ActionHandler(controller: self, keyboardContext: state.keyboardContext, keyboardBehavior: services.keyboardBehavior, autocompleteContext: state.autocompleteContext, feedbackConfiguration: state.feedbackConfiguration, spaceDragGestureHandler: services.spaceDragGestureHandler)
+        services.autocompleteProvider = EsperantoAutocompleteProvider(context: state.autocompleteContext)
+        services.calloutActionProvider = StandardCalloutActionProvider(keyboardContext: state.keyboardContext, baseProvider: CalloutActionProvider())
         services.layoutProvider = LayoutProvider(alphabeticInputSet: .esperanto, numericInputSet: .standardNumeric(currency: "$"), symbolicInputSet: .standardSymbolic(currencies: ["$"]))
         services.styleProvider = StyleProvider(keyboardContext: state.keyboardContext, diacritics: diacritics)
-        services.actionHandler = ActionHandler(controller: self, keyboardContext: state.keyboardContext, keyboardBehavior: services.keyboardBehavior, autocompleteContext: state.autocompleteContext, feedbackConfiguration: state.feedbackConfiguration, spaceDragGestureHandler: services.spaceDragGestureHandler)
-        services.calloutActionProvider = StandardCalloutActionProvider(keyboardContext: state.keyboardContext, baseProvider: CalloutActionProvider())
-        services.autocompleteProvider = EsperantoAutocompleteProvider(
-            context: state.autocompleteContext
-        )
+        
+        super.viewDidLoad()
     }
     
     override func viewWillSetupKeyboard() {
@@ -39,10 +39,12 @@ class KeyboardController: KeyboardInputViewController {
                         } else {
                             params.view
                         }
+                    case Constants.Actions.toggleDiacritics:
+                        KeyboardButton.DiacriticContent(action: params.item.action, styleProvider: sp)
                     case .space:
                         KeyboardButton.SpaceContent(localeText: "Esperanto", spaceView: KeyboardButton.Title(text: params.item.action.esperantoLocalization ?? "␣", action: .space))
                     case .primary(let returnKeyType):
-                        KeyboardButton.Title(text: returnKeyType.esperantoLocalization, action: params.item.action)
+                        KeyboardButton.Title(text: returnKeyType.esperantoLocalization, action: .primary(returnKeyType))
                     default:
                         params.view
                     }

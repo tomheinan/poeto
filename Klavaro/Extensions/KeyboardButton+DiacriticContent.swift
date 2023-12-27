@@ -34,6 +34,8 @@ private extension KeyboardButton.DiacriticContent {
     var bodyContent: some View {
         if let text = styleProvider.buttonText(for: action) {
             textView(for: action, text: text)
+        } else if let image = styleProvider.buttonImage(for: action) {
+            image.scaleEffect(styleProvider.buttonImageScaleFactor(for: action)).scaledToFit()
         } else {
             Text("")
         }
