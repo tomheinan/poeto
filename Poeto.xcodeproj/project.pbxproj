@@ -15,6 +15,9 @@
 		E2579A7A2B3CBE84002C853E /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = E2579A792B3CBE84002C853E /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		E2579A7C2B3CBE84002C853E /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = E2579A7B2B3CBE84002C853E /* FirebaseCrashlytics */; };
 		E2579A7E2B3CC2AA002C853E /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E2579A7D2B3CC2AA002C853E /* FirebaseAnalyticsSwift */; };
+		E2579A822B3D34D6002C853E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2579A812B3D34D6002C853E /* Constants.swift */; };
+		E2579A832B3D34D6002C853E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2579A812B3D34D6002C853E /* Constants.swift */; };
+		E2579A842B3D34D6002C853E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2579A812B3D34D6002C853E /* Constants.swift */; };
 		E2626FA92B30AF310020F59A /* PoetoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2626FA82B30AF310020F59A /* PoetoApp.swift */; };
 		E2626FAB2B30AF310020F59A /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2626FAA2B30AF310020F59A /* HomeScreen.swift */; };
 		E2626FAD2B30AF330020F59A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2626FAC2B30AF330020F59A /* Assets.xcassets */; };
@@ -81,6 +84,9 @@
 		E21944482B3C938100D63851 /* KeyboardAction+EsperantoLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardAction+EsperantoLocalization.swift"; sourceTree = "<group>"; };
 		E219444A2B3C9BFE00D63851 /* ReturnKeyType+EsperantoLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReturnKeyType+EsperantoLocalization.swift"; sourceTree = "<group>"; };
 		E2579A742B3CBCDB002C853E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E2579A7F2B3D3374002C853E /* Poeto.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Poeto.entitlements; sourceTree = "<group>"; };
+		E2579A802B3D337D002C853E /* Klavaro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Klavaro.entitlements; sourceTree = "<group>"; };
+		E2579A812B3D34D6002C853E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E2626FA52B30AF310020F59A /* Poeto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poeto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2626FA82B30AF310020F59A /* PoetoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetoApp.swift; sourceTree = "<group>"; };
 		E2626FAA2B30AF310020F59A /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -144,6 +150,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E2579A852B3D34ED002C853E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				E2626FAA2B30AF310020F59A /* HomeScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		E2626F9C2B30AF310020F59A = {
 			isa = PBXGroup;
 			children = (
@@ -171,9 +185,11 @@
 			isa = PBXGroup;
 			children = (
 				E2626FA82B30AF310020F59A /* PoetoApp.swift */,
-				E2626FAA2B30AF310020F59A /* HomeScreen.swift */,
+				E2579A812B3D34D6002C853E /* Constants.swift */,
+				E2579A852B3D34ED002C853E /* Screens */,
 				E2626FAC2B30AF330020F59A /* Assets.xcassets */,
 				E2579A742B3CBCDB002C853E /* GoogleService-Info.plist */,
+				E2579A7F2B3D3374002C853E /* Poeto.entitlements */,
 				E2626FAE2B30AF330020F59A /* Preview Content */,
 			);
 			path = Poeto;
@@ -214,6 +230,7 @@
 				E27C2E722B3A309B00354D74 /* Handlers */,
 				E27C2E6E2B3A233E00354D74 /* Extensions */,
 				E27C2E622B35EFC300354D74 /* Media.xcassets */,
+				E2579A802B3D337D002C853E /* Klavaro.entitlements */,
 				E27C2E402B30B1DF00354D74 /* Info.plist */,
 			);
 			path = Klavaro;
@@ -437,6 +454,7 @@
 			files = (
 				E2626FAB2B30AF310020F59A /* HomeScreen.swift in Sources */,
 				E2626FA92B30AF310020F59A /* PoetoApp.swift in Sources */,
+				E2579A822B3D34D6002C853E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2626FBA2B30AF330020F59A /* PoetoTests.swift in Sources */,
+				E2579A832B3D34D6002C853E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +473,7 @@
 			files = (
 				E2626FC62B30AF330020F59A /* PoetoUITestsLaunchTests.swift in Sources */,
 				E2626FC42B30AF330020F59A /* PoetoUITests.swift in Sources */,
+				E2579A842B3D34D6002C853E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,6 +643,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Poeto/Poeto.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Poeto/Preview Content\"";
@@ -653,6 +674,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Poeto/Poeto.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Poeto/Preview Content\"";
@@ -757,6 +779,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Klavaro/Klavaro.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9R4AQ377X3;
@@ -784,6 +807,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Klavaro/Klavaro.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9R4AQ377X3;

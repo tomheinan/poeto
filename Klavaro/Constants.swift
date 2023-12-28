@@ -14,6 +14,12 @@ struct Constants {
         static let toggleDiacritics = KeyboardAction.custom(named: "toggleDiacritics")
     }
     
+    struct AppGroup {
+        static let appGroupIdentifier = "group.app.poeto"
+        static let sharedFolderURL: URL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: appGroupIdentifier)!
+        static let sharedUserDefaults: UserDefaults = UserDefaults(suiteName: appGroupIdentifier)!
+    }
+    
     struct Colors {
         static let primaryGreen = Color("primaryGreen", bundle: nil)
         static let secondaryGreen = Color("secondaryGreen", bundle: nil)
