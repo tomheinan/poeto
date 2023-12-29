@@ -39,9 +39,7 @@
 		E27C2E692B39301300354D74 /* Diacritics.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E682B39301300354D74 /* Diacritics.swift */; };
 		E27C2E6D2B3A230200354D74 /* CalloutActionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E6C2B3A230200354D74 /* CalloutActionProvider.swift */; };
 		E27C2E702B3A306300354D74 /* EsperantoAutocompleteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E6F2B3A306300354D74 /* EsperantoAutocompleteProvider.swift */; };
-		E28E62B62B3DD39700253706 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = E28E62B32B3DD39700253706 /* sqlite3.c */; };
 		E28E62BE2B3DD66700253706 /* Lexicon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28E62BD2B3DD66700253706 /* Lexicon.swift */; };
-		E28E62C22B3DDFAB00253706 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = E28E62B32B3DD39700253706 /* sqlite3.c */; };
 		E28E62C42B3DE04600253706 /* Lexicon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28E62BD2B3DD66700253706 /* Lexicon.swift */; };
 		E28E62C52B3DE09E00253706 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E582B3216A200354D74 /* Constants.swift */; };
 		E28E62CC2B3DEA5300253706 /* poeto.db in Resources */ = {isa = PBXBuildFile; fileRef = E28E62CB2B3DEA5300253706 /* poeto.db */; };
@@ -116,9 +114,6 @@
 		E27C2E682B39301300354D74 /* Diacritics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diacritics.swift; sourceTree = "<group>"; };
 		E27C2E6C2B3A230200354D74 /* CalloutActionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalloutActionProvider.swift; sourceTree = "<group>"; };
 		E27C2E6F2B3A306300354D74 /* EsperantoAutocompleteProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsperantoAutocompleteProvider.swift; sourceTree = "<group>"; };
-		E28E62B32B3DD39700253706 /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
-		E28E62B42B3DD39700253706 /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
-		E28E62B52B3DD39700253706 /* sqlite3ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3ext.h; sourceTree = "<group>"; };
 		E28E62BA2B3DD40100253706 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		E28E62BD2B3DD66700253706 /* Lexicon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lexicon.swift; sourceTree = "<group>"; };
 		E28E62CB2B3DEA5300253706 /* poeto.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = poeto.db; sourceTree = "<group>"; };
@@ -292,24 +287,6 @@
 			path = Handlers;
 			sourceTree = "<group>";
 		};
-		E28E62B12B3DD39700253706 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				E28E62B22B3DD39700253706 /* SQLite */,
-			);
-			path = Libraries;
-			sourceTree = "<group>";
-		};
-		E28E62B22B3DD39700253706 /* SQLite */ = {
-			isa = PBXGroup;
-			children = (
-				E28E62B32B3DD39700253706 /* sqlite3.c */,
-				E28E62B42B3DD39700253706 /* sqlite3.h */,
-				E28E62B52B3DD39700253706 /* sqlite3ext.h */,
-			);
-			path = SQLite;
-			sourceTree = "<group>";
-		};
 		E28E62C32B3DE01E00253706 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,7 +294,6 @@
 				E28E62BD2B3DD66700253706 /* Lexicon.swift */,
 				E27C2E582B3216A200354D74 /* Constants.swift */,
 				E2330E5B2B3E67B200E3B8E5 /* Extensions */,
-				E28E62B12B3DD39700253706 /* Libraries */,
 				E28E62CA2B3DEA5300253706 /* Resources */,
 			);
 			path = Shared;
@@ -514,7 +490,6 @@
 				E2330E592B3E67AD00E3B8E5 /* String+IsCapitalized.swift in Sources */,
 				E2626FA92B30AF310020F59A /* PoetoApp.swift in Sources */,
 				E28E62C42B3DE04600253706 /* Lexicon.swift in Sources */,
-				E28E62C22B3DDFAB00253706 /* sqlite3.c in Sources */,
 				E28E62C52B3DE09E00253706 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,7 +520,6 @@
 				E219444B2B3C9BFE00D63851 /* ReturnKeyType+EsperantoLocalization.swift in Sources */,
 				E27C2E5F2B3236BB00354D74 /* ActionHandler.swift in Sources */,
 				E27C2E552B31471100354D74 /* LayoutProvider.swift in Sources */,
-				E28E62B62B3DD39700253706 /* sqlite3.c in Sources */,
 				E27C2E702B3A306300354D74 /* EsperantoAutocompleteProvider.swift in Sources */,
 				E27C2E6D2B3A230200354D74 /* CalloutActionProvider.swift in Sources */,
 				E27C2E652B391D9700354D74 /* KeyboardButton+DiacriticContent.swift in Sources */,
