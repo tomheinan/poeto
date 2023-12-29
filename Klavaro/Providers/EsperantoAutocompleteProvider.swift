@@ -44,10 +44,28 @@ class EsperantoAutocompleteProvider: AutocompleteProvider {
 private extension EsperantoAutocompleteProvider {
     
     func suggestions(for text: String) -> [Autocomplete.Suggestion] {
-        [
-            .init(text: text, isUnknown: true),
-            .init(text: text, isAutocorrect: true),
-            .init(text: text, subtitle: "Subtitle")
-        ]
+        let inputWord = Lexicon.Item(word: text)
+        var suggestions: [Autocomplete.Suggestion] = []
+        var candidateItems = Lexicon.search(word: text)
+        
+        if candidateItems.contains(inputWord) {
+            if let candidateWord = candidateItems.first(where: { $0 == inputWord }) {
+                suggestions.append(.init(text: candidateWord.word, isUnknown: false, subtitle: candidateWord.hintEnglish))
+            }
+            candidateItems.removeAll { $0 == inputWord }
+        } else {
+            suggestions.append(.init(text: inputWord.word, isUnknown: true))
+        }
+        
+        var remainingWords = 2
+        for candidateItem in candidateItems {
+            suggestions.append(.init(text: candidateItem.word, subtitle: candidateItem.hintEnglish))
+            remainingWords -= 1
+            if remainingWords <= 0 {
+                break
+            }
+        }
+        
+        return suggestions
     }
 }

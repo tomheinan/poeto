@@ -9,15 +9,14 @@
 /* Begin PBXBuildFile section */
 		E21944492B3C938100D63851 /* KeyboardAction+EsperantoLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21944482B3C938100D63851 /* KeyboardAction+EsperantoLocalization.swift */; };
 		E219444B2B3C9BFE00D63851 /* ReturnKeyType+EsperantoLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219444A2B3C9BFE00D63851 /* ReturnKeyType+EsperantoLocalization.swift */; };
+		E2330E592B3E67AD00E3B8E5 /* String+IsCapitalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2330E582B3E67AD00E3B8E5 /* String+IsCapitalized.swift */; };
+		E2330E5A2B3E67AD00E3B8E5 /* String+IsCapitalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2330E582B3E67AD00E3B8E5 /* String+IsCapitalized.swift */; };
 		E2579A752B3CBCDB002C853E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2579A742B3CBCDB002C853E /* GoogleService-Info.plist */; };
 		E2579A762B3CBCDB002C853E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2579A742B3CBCDB002C853E /* GoogleService-Info.plist */; };
 		E2579A772B3CBCDB002C853E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2579A742B3CBCDB002C853E /* GoogleService-Info.plist */; };
 		E2579A7A2B3CBE84002C853E /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = E2579A792B3CBE84002C853E /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		E2579A7C2B3CBE84002C853E /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = E2579A7B2B3CBE84002C853E /* FirebaseCrashlytics */; };
 		E2579A7E2B3CC2AA002C853E /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E2579A7D2B3CC2AA002C853E /* FirebaseAnalyticsSwift */; };
-		E2579A822B3D34D6002C853E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2579A812B3D34D6002C853E /* Constants.swift */; };
-		E2579A832B3D34D6002C853E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2579A812B3D34D6002C853E /* Constants.swift */; };
-		E2579A842B3D34D6002C853E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2579A812B3D34D6002C853E /* Constants.swift */; };
 		E2626FA92B30AF310020F59A /* PoetoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2626FA82B30AF310020F59A /* PoetoApp.swift */; };
 		E2626FAB2B30AF310020F59A /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2626FAA2B30AF310020F59A /* HomeScreen.swift */; };
 		E2626FAD2B30AF330020F59A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2626FAC2B30AF330020F59A /* Assets.xcassets */; };
@@ -40,6 +39,12 @@
 		E27C2E692B39301300354D74 /* Diacritics.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E682B39301300354D74 /* Diacritics.swift */; };
 		E27C2E6D2B3A230200354D74 /* CalloutActionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E6C2B3A230200354D74 /* CalloutActionProvider.swift */; };
 		E27C2E702B3A306300354D74 /* EsperantoAutocompleteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E6F2B3A306300354D74 /* EsperantoAutocompleteProvider.swift */; };
+		E28E62B62B3DD39700253706 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = E28E62B32B3DD39700253706 /* sqlite3.c */; };
+		E28E62BE2B3DD66700253706 /* Lexicon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28E62BD2B3DD66700253706 /* Lexicon.swift */; };
+		E28E62C22B3DDFAB00253706 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = E28E62B32B3DD39700253706 /* sqlite3.c */; };
+		E28E62C42B3DE04600253706 /* Lexicon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28E62BD2B3DD66700253706 /* Lexicon.swift */; };
+		E28E62C52B3DE09E00253706 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E582B3216A200354D74 /* Constants.swift */; };
+		E28E62CC2B3DEA5300253706 /* poeto.db in Resources */ = {isa = PBXBuildFile; fileRef = E28E62CB2B3DEA5300253706 /* poeto.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,10 +88,10 @@
 /* Begin PBXFileReference section */
 		E21944482B3C938100D63851 /* KeyboardAction+EsperantoLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardAction+EsperantoLocalization.swift"; sourceTree = "<group>"; };
 		E219444A2B3C9BFE00D63851 /* ReturnKeyType+EsperantoLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReturnKeyType+EsperantoLocalization.swift"; sourceTree = "<group>"; };
+		E2330E582B3E67AD00E3B8E5 /* String+IsCapitalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+IsCapitalized.swift"; sourceTree = "<group>"; };
 		E2579A742B3CBCDB002C853E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E2579A7F2B3D3374002C853E /* Poeto.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Poeto.entitlements; sourceTree = "<group>"; };
 		E2579A802B3D337D002C853E /* Klavaro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Klavaro.entitlements; sourceTree = "<group>"; };
-		E2579A812B3D34D6002C853E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E2626FA52B30AF310020F59A /* Poeto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poeto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2626FA82B30AF310020F59A /* PoetoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetoApp.swift; sourceTree = "<group>"; };
 		E2626FAA2B30AF310020F59A /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -111,6 +116,12 @@
 		E27C2E682B39301300354D74 /* Diacritics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diacritics.swift; sourceTree = "<group>"; };
 		E27C2E6C2B3A230200354D74 /* CalloutActionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalloutActionProvider.swift; sourceTree = "<group>"; };
 		E27C2E6F2B3A306300354D74 /* EsperantoAutocompleteProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsperantoAutocompleteProvider.swift; sourceTree = "<group>"; };
+		E28E62B32B3DD39700253706 /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
+		E28E62B42B3DD39700253706 /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
+		E28E62B52B3DD39700253706 /* sqlite3ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3ext.h; sourceTree = "<group>"; };
+		E28E62BA2B3DD40100253706 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		E28E62BD2B3DD66700253706 /* Lexicon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lexicon.swift; sourceTree = "<group>"; };
+		E28E62CB2B3DEA5300253706 /* poeto.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = poeto.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +161,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E2330E5B2B3E67B200E3B8E5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E2330E582B3E67AD00E3B8E5 /* String+IsCapitalized.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		E2579A852B3D34ED002C853E /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +182,7 @@
 			children = (
 				E2626FA72B30AF310020F59A /* Poeto */,
 				E27C2E3D2B30B1DF00354D74 /* Klavaro */,
+				E28E62C32B3DE01E00253706 /* Shared */,
 				E2626FB82B30AF330020F59A /* PoetoTests */,
 				E2626FC22B30AF330020F59A /* PoetoUITests */,
 				E2626FA62B30AF310020F59A /* Products */,
@@ -185,7 +205,6 @@
 			isa = PBXGroup;
 			children = (
 				E2626FA82B30AF310020F59A /* PoetoApp.swift */,
-				E2579A812B3D34D6002C853E /* Constants.swift */,
 				E2579A852B3D34ED002C853E /* Screens */,
 				E2626FAC2B30AF330020F59A /* Assets.xcassets */,
 				E2579A742B3CBCDB002C853E /* GoogleService-Info.plist */,
@@ -225,7 +244,6 @@
 			children = (
 				E27C2E4B2B3125B300354D74 /* KeyboardController.swift */,
 				E27C2E682B39301300354D74 /* Diacritics.swift */,
-				E27C2E582B3216A200354D74 /* Constants.swift */,
 				E27C2E712B3A308A00354D74 /* Providers */,
 				E27C2E722B3A309B00354D74 /* Handlers */,
 				E27C2E6E2B3A233E00354D74 /* Extensions */,
@@ -272,6 +290,45 @@
 				E27C2E5E2B3236BB00354D74 /* ActionHandler.swift */,
 			);
 			path = Handlers;
+			sourceTree = "<group>";
+		};
+		E28E62B12B3DD39700253706 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				E28E62B22B3DD39700253706 /* SQLite */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		E28E62B22B3DD39700253706 /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				E28E62B32B3DD39700253706 /* sqlite3.c */,
+				E28E62B42B3DD39700253706 /* sqlite3.h */,
+				E28E62B52B3DD39700253706 /* sqlite3ext.h */,
+			);
+			path = SQLite;
+			sourceTree = "<group>";
+		};
+		E28E62C32B3DE01E00253706 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E28E62BA2B3DD40100253706 /* BridgingHeader.h */,
+				E28E62BD2B3DD66700253706 /* Lexicon.swift */,
+				E27C2E582B3216A200354D74 /* Constants.swift */,
+				E2330E5B2B3E67B200E3B8E5 /* Extensions */,
+				E28E62B12B3DD39700253706 /* Libraries */,
+				E28E62CA2B3DEA5300253706 /* Resources */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		E28E62CA2B3DEA5300253706 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E28E62CB2B3DEA5300253706 /* poeto.db */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,6 +475,7 @@
 				E2626FB02B30AF330020F59A /* Preview Assets.xcassets in Resources */,
 				E2626FAD2B30AF330020F59A /* Assets.xcassets in Resources */,
 				E2579A752B3CBCDB002C853E /* GoogleService-Info.plist in Resources */,
+				E28E62CC2B3DEA5300253706 /* poeto.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,8 +511,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2626FAB2B30AF310020F59A /* HomeScreen.swift in Sources */,
+				E2330E592B3E67AD00E3B8E5 /* String+IsCapitalized.swift in Sources */,
 				E2626FA92B30AF310020F59A /* PoetoApp.swift in Sources */,
-				E2579A822B3D34D6002C853E /* Constants.swift in Sources */,
+				E28E62C42B3DE04600253706 /* Lexicon.swift in Sources */,
+				E28E62C22B3DDFAB00253706 /* sqlite3.c in Sources */,
+				E28E62C52B3DE09E00253706 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,7 +524,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2626FBA2B30AF330020F59A /* PoetoTests.swift in Sources */,
-				E2579A832B3D34D6002C853E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,7 +533,6 @@
 			files = (
 				E2626FC62B30AF330020F59A /* PoetoUITestsLaunchTests.swift in Sources */,
 				E2626FC42B30AF330020F59A /* PoetoUITests.swift in Sources */,
-				E2579A842B3D34D6002C853E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,12 +545,15 @@
 				E219444B2B3C9BFE00D63851 /* ReturnKeyType+EsperantoLocalization.swift in Sources */,
 				E27C2E5F2B3236BB00354D74 /* ActionHandler.swift in Sources */,
 				E27C2E552B31471100354D74 /* LayoutProvider.swift in Sources */,
+				E28E62B62B3DD39700253706 /* sqlite3.c in Sources */,
 				E27C2E702B3A306300354D74 /* EsperantoAutocompleteProvider.swift in Sources */,
 				E27C2E6D2B3A230200354D74 /* CalloutActionProvider.swift in Sources */,
 				E27C2E652B391D9700354D74 /* KeyboardButton+DiacriticContent.swift in Sources */,
 				E27C2E4C2B3125B300354D74 /* KeyboardController.swift in Sources */,
+				E28E62BE2B3DD66700253706 /* Lexicon.swift in Sources */,
 				E27C2E572B314CE800354D74 /* StyleProvider.swift in Sources */,
 				E27C2E692B39301300354D74 /* Diacritics.swift in Sources */,
+				E2330E5A2B3E67AD00E3B8E5 /* String+IsCapitalized.swift in Sources */,
 				E27C2E5D2B3232EA00354D74 /* String+AsDiacriticalEquivalent.swift in Sources */,
 				E27C2E532B3141D700354D74 /* InputSet+Esperanto.swift in Sources */,
 			);
@@ -663,6 +725,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = app.poeto.Poeto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = Shared/BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -694,6 +757,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = app.poeto.Poeto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = Shared/BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -797,6 +861,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = Shared/BridgingHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -825,6 +890,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = Shared/BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

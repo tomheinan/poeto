@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseCore
+import FirebaseAnalytics
 
 @main
 struct PoetoApp: App {
@@ -15,6 +16,7 @@ struct PoetoApp: App {
     
     init() {
         FirebaseApp.configure()
+        setUpLexicon()
     }
     
     var body: some Scene {
@@ -23,9 +25,13 @@ struct PoetoApp: App {
         }
         .onChange(of: scenePhase) { _, newValue in
             if newValue == .active {
-                print("active")
+                
             }
         }
     }
     
+    private func setUpLexicon() {
+        Lexicon.setup()
+        Analytics.logEvent("initialize_lexicon", parameters: [:])
+    }
 }
