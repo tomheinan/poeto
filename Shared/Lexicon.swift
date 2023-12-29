@@ -15,45 +15,45 @@ struct Lexicon {
     private static let limit = 3
     
     static func search(word: String) -> [Item] {
-        var db: OpaquePointer?
+        guard let db = try? openDatabase() else { return [] }
+        defer { closeDatabase(database: db) }
         
-        do {
-            db = try openDatabase()
-        } catch {
-            print("Unable to open database")
-            return []
-        }
-        
-        guard let db = db else { return [] }
-        
-        var queryStatement: OpaquePointer?
         let queryString = "SELECT \(columns.joined(separator: ", ")) FROM words WHERE word LIKE \"\(word)%\" LIMIT \(limit)"
         var candidateWords: [Item] = []
         
-        if SQLiteStatusCode(rawValue: sqlite3_prepare_v2(db, queryString, -1, &queryStatement, nil)) == .ok {
+        guard let statement = try? openStatement(dbPointer: db, queryString: queryString) else { return [] }
+        defer { closeStatement(statement: statement) }
             
-            while SQLiteStatusCode(rawValue: sqlite3_step(queryStatement)) == .row {
-                if let queryResultCol0 = sqlite3_column_text(queryStatement, 0) {
-                    let candidateWord = String(cString: queryResultCol0)
-                    var hintEnglish: String?
-                    if let queryResultCol1 = sqlite3_column_text(queryStatement, 1) {
-                        hintEnglish = String(cString: queryResultCol1)
-                    }
-                    
-                    let item = Item(word: (word.isCapitalized ? candidateWord.capitalized : candidateWord), hintEnglish: hintEnglish)
-                    candidateWords.append(item)
+        while SQLiteStatusCode(rawValue: sqlite3_step(statement)) == .row {
+            if let queryResultCol0 = sqlite3_column_text(statement, 0) {
+                let candidateWord = String(cString: queryResultCol0)
+                var hintEnglish: String?
+                if let queryResultCol1 = sqlite3_column_text(statement, 1) {
+                    hintEnglish = String(cString: queryResultCol1)
                 }
+                
+                let item = Item(word: (word.isCapitalized ? candidateWord.capitalized : candidateWord), hintEnglish: hintEnglish)
+                candidateWords.append(item)
             }
-            
-        } else {
-            let errorMessage = String(cString: sqlite3_errmsg(db))
-            print(errorMessage)
         }
         
-        sqlite3_finalize(queryStatement)
-        closeDatabase(dbPointer: db)
-        
         return candidateWords
+    }
+    
+    static func wordCount() -> Int {
+        guard let db = try? openDatabase() else { return 0 }
+        defer { closeDatabase(database: db) }
+        
+        let queryString = "SELECT COUNT(word) FROM words"
+        guard let statement = try? openStatement(dbPointer: db, queryString: queryString) else { return 0 }
+        defer { closeStatement(statement: statement) }
+        
+        if SQLiteStatusCode(rawValue: sqlite3_step(statement)) == .row {
+            let queryResultCol0 = sqlite3_column_int(statement, 0)
+            return Int(queryResultCol0)
+        }
+        
+        return 0
     }
     
     static func setup() {
@@ -72,14 +72,33 @@ struct Lexicon {
         }
     }
     
-    private static func openDatabase() throws -> OpaquePointer? {
-        var db: OpaquePointer?
+    typealias QueryStatement = OpaquePointer
+    
+    private static func openStatement(dbPointer: OpaquePointer, queryString: String) throws -> QueryStatement {
+        var queryStatement: QueryStatement?
+        let statusCode = SQLiteStatusCode(rawValue: sqlite3_prepare_v2(dbPointer, queryString, -1, &queryStatement, nil))
+        if statusCode == .ok, let queryStatement = queryStatement {
+            return queryStatement
+        } else {
+            if let statusCode = statusCode {
+                throw statusCode
+            } else {
+                throw SQLiteStatusCode.error
+            }
+        }
+    }
+    
+    private static func closeStatement(statement: QueryStatement) {
+        sqlite3_finalize(statement)
+    }
+    
+    typealias Database = OpaquePointer
+    
+    private static func openDatabase() throws -> Database {
+        var db: Database?
         
-        let returnValue = sqlite3_open(Constants.AppGroup.sharedDBPath, &db)
-        let statusCode = SQLiteStatusCode(rawValue: returnValue)
-        
-        if statusCode == .ok {
-            print("Successfully opened connection to database at \(Constants.AppGroup.sharedDBPath)")
+        let statusCode = SQLiteStatusCode(rawValue: sqlite3_open(Constants.AppGroup.sharedDBPath, &db))
+        if statusCode == .ok, let db = db {
             return db
         } else {
             if let statusCode = statusCode {
@@ -90,8 +109,8 @@ struct Lexicon {
         }
     }
     
-    private static func closeDatabase(dbPointer: OpaquePointer) {
-        sqlite3_close(dbPointer)
+    private static func closeDatabase(database: Database) {
+        sqlite3_close(database)
     }
     
 }

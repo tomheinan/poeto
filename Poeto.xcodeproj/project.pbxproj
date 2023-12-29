@@ -11,6 +11,7 @@
 		E219444B2B3C9BFE00D63851 /* ReturnKeyType+EsperantoLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219444A2B3C9BFE00D63851 /* ReturnKeyType+EsperantoLocalization.swift */; };
 		E2330E592B3E67AD00E3B8E5 /* String+IsCapitalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2330E582B3E67AD00E3B8E5 /* String+IsCapitalized.swift */; };
 		E2330E5A2B3E67AD00E3B8E5 /* String+IsCapitalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2330E582B3E67AD00E3B8E5 /* String+IsCapitalized.swift */; };
+		E2330E5D2B3E8BD700E3B8E5 /* Bundle+VersionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2330E5C2B3E8BD700E3B8E5 /* Bundle+VersionInfo.swift */; };
 		E2579A752B3CBCDB002C853E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2579A742B3CBCDB002C853E /* GoogleService-Info.plist */; };
 		E2579A762B3CBCDB002C853E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2579A742B3CBCDB002C853E /* GoogleService-Info.plist */; };
 		E2579A772B3CBCDB002C853E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2579A742B3CBCDB002C853E /* GoogleService-Info.plist */; };
@@ -87,6 +88,7 @@
 		E21944482B3C938100D63851 /* KeyboardAction+EsperantoLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardAction+EsperantoLocalization.swift"; sourceTree = "<group>"; };
 		E219444A2B3C9BFE00D63851 /* ReturnKeyType+EsperantoLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReturnKeyType+EsperantoLocalization.swift"; sourceTree = "<group>"; };
 		E2330E582B3E67AD00E3B8E5 /* String+IsCapitalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+IsCapitalized.swift"; sourceTree = "<group>"; };
+		E2330E5C2B3E8BD700E3B8E5 /* Bundle+VersionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+VersionInfo.swift"; sourceTree = "<group>"; };
 		E2579A742B3CBCDB002C853E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E2579A7F2B3D3374002C853E /* Poeto.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Poeto.entitlements; sourceTree = "<group>"; };
 		E2579A802B3D337D002C853E /* Klavaro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Klavaro.entitlements; sourceTree = "<group>"; };
@@ -164,6 +166,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		E2330E5E2B3E8BDB00E3B8E5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E2330E5C2B3E8BD700E3B8E5 /* Bundle+VersionInfo.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		E2579A852B3D34ED002C853E /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +215,7 @@
 				E2579A742B3CBCDB002C853E /* GoogleService-Info.plist */,
 				E2579A7F2B3D3374002C853E /* Poeto.entitlements */,
 				E2626FAE2B30AF330020F59A /* Preview Content */,
+				E2330E5E2B3E8BDB00E3B8E5 /* Extensions */,
 			);
 			path = Poeto;
 			sourceTree = "<group>";
@@ -490,6 +501,7 @@
 				E2330E592B3E67AD00E3B8E5 /* String+IsCapitalized.swift in Sources */,
 				E2626FA92B30AF310020F59A /* PoetoApp.swift in Sources */,
 				E28E62C42B3DE04600253706 /* Lexicon.swift in Sources */,
+				E2330E5D2B3E8BD700E3B8E5 /* Bundle+VersionInfo.swift in Sources */,
 				E28E62C52B3DE09E00253706 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

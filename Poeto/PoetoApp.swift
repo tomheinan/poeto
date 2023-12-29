@@ -32,6 +32,11 @@ struct PoetoApp: App {
     
     private func setUpLexicon() {
         Lexicon.setup()
-        Analytics.logEvent("initialize_lexicon", parameters: [:])
+        
+        if let appVersion = Bundle.main.releaseVersionNumber {
+            let wordCount = Lexicon.wordCount()
+            print("Loaded Esperanto Lexicon v\(appVersion) (\(wordCount) words)")
+            Analytics.logEvent("set_up_lexicon", parameters: ["version": appVersion, "word_count": wordCount])
+        }
     }
 }
