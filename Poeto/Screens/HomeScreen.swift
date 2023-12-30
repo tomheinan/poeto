@@ -23,59 +23,58 @@ struct HomeScreen: View {
     @State
     var text: String = ""
     
-    private let coloredNavAppearance = UINavigationBarAppearance()
+    private let navAppearance = UINavigationBarAppearance()
     private let fontSize: CGFloat = 18
     private let headerFont = Font.custom("Quicksand-Bold", size: 18)
     private let bodyFont = Font.custom("Quicksand-Regular", size: 18)
     private let stepIconRadius: CGFloat = 48
     
+    private var lexiconWordCount: String {
+        let wordCount = Lexicon.wordCount()
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        if let wordCountString = numberFormatter.string(from: NSNumber(value:wordCount)) {
+            return wordCountString
+        } else {
+            return "0"
+        }
+    }
+    
     init() {
-        coloredNavAppearance.configureWithOpaqueBackground()
-        coloredNavAppearance.backgroundColor = Constants.Colors.backgroundGreen.uiColor
-        coloredNavAppearance.titleTextAttributes = [.foregroundColor: Constants.Colors.bodyText.uiColor]
-        coloredNavAppearance.largeTitleTextAttributes = [.foregroundColor: Constants.Colors.bodyText.uiColor]
+        navAppearance.configureWithOpaqueBackground()
+        navAppearance.backgroundColor = Constants.Colors.backgroundGreen.uiColor
+        navAppearance.titleTextAttributes = [.foregroundColor: Constants.Colors.bodyText.uiColor]
+        navAppearance.largeTitleTextAttributes = [.foregroundColor: Constants.Colors.bodyText.uiColor]
         
-        UINavigationBar.appearance().standardAppearance = coloredNavAppearance
-        UINavigationBar.appearance().scrollEdgeAppearance = coloredNavAppearance
-        
-        if let font = UIFont(name: "Quicksand-Bold", size: 20) {
-            UINavigationBar.appearance().largeTitleTextAttributes = [.font : font]
-            UINavigationBar.appearance().titleTextAttributes = [.font : font]
+        if let largeTitleFont = UIFont(name: "Quicksand-Bold", size: 28), let titleFont = UIFont(name: "Quicksand-Bold", size: 20) {
+            navAppearance.largeTitleTextAttributes =  [.font : largeTitleFont, .foregroundColor: Constants.Colors.bodyText.uiColor]
+            navAppearance.titleTextAttributes =  [.font : titleFont, .foregroundColor: Constants.Colors.bodyText.uiColor]
         }
         
+        UINavigationBar.appearance().standardAppearance = navAppearance
+        UINavigationBar.appearance().compactAppearance = navAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = navAppearance
+        
+        print(Locale.current)
     }
     
     var body: some View {
-        GeometryReader { reader in
-            NavigationView {
-                VStack(spacing: 0) {
-                    ZStack {
-                        Image("header", bundle: nil).resizable().aspectRatio(contentMode: .fill)
-                    }
-                    .frame(height: reader.size.height/3).ignoresSafeArea()
-                    .overlay(alignment: .bottomLeading) {
-                        Text("Poeto")
-                            .font(Font.custom("Quicksand-Bold", size: 36))
-                            .padding(EdgeInsets(top: 0, leading: 40, bottom: 70, trailing: 0))
-                    }
-                    List {
-                        if !keyboardState.isKeyboardEnabled {
-                            onboardingSection
-                        }
-                        textFieldSection
-                        settingsSection
-                    }
-                    .buttonStyle(.plain)
-                    .navigationBarTitle("Poeto")
-                    .analyticsScreen(name: "home_screen", class: "HomeScreen")
-                    .scrollContentBackground(.hidden)
-                    .background(Constants.Colors.backgroundGreen.edgesIgnoringSafeArea(.all))
-                    .padding(.top, -60)
+        NavigationView {
+            List {
+                if !keyboardState.isKeyboardEnabled {
+                    onboardingSection
                 }
-                .navigationTitle("Poeto")
-                .navigationBarHidden(true)
+                textFieldSection
+                settingsSection
+                aboutSection
             }
+            .scrollContentBackground(.hidden)
+            .background(Constants.Colors.backgroundGreen.edgesIgnoringSafeArea(.all))
+            .navigationTitle("Poeto")
+            .analyticsScreen(name: "home_screen", class: "HomeScreen")
         }
+        .navigationViewStyle(.stack)
+        
     }
 }
 
@@ -83,10 +82,10 @@ extension HomeScreen {
     
     var onboardingSection: some View {
         Section(header: header(text: "komenca instalaĵo"), footer: footer(text: "Antaŭ ol vi povas uzi la klavaron por la unua fojo, vi devas ebligi ĝin en iOS-agordoj.")) {
-            onboardingStep(number: 1, text: "Navigu al \"Agordoj\"")
-            onboardingStep(number: 2, text: "Tuŝetu \"Klavarojn\"")
+            onboardingStep(number: 1, text: "Malfermu \"\(NSLocalizedString("Settings", comment: "The word for 'Settings' in the user's locale"))\"")
+            onboardingStep(number: 2, text: "Tuŝetu \"\(NSLocalizedString("Keyboard", comment: "The word for 'Keyboard' in the user's locale"))\"")
             onboardingStep(number: 3, text: "Aktivigi Poeton")
-            OpenSettingsButton(text: "Malfermi agordojn", fontSize: fontSize, stepIconRadius: stepIconRadius)
+            OpenSettingsButton(text: "Malfermi \"\(NSLocalizedString("Settings", comment: "The word for 'Settings' in the user's locale"))\"", fontSize: fontSize, stepIconRadius: stepIconRadius)
         }
     }
     
@@ -108,8 +107,40 @@ extension HomeScreen {
         .font(bodyFont)
     }
     
-    var footerText: some View {
-        Text("You must enable the keyboard in System Settings, then select it with 🌐 when typing.")
+    var aboutSection: some View {
+        Section(header: header(text: "Pri ĉi tiu Apo"), footer: starFooter) {
+            HStack {
+                Text("Versio")
+                Spacer()
+                Text(Bundle.main.versionNumber!)
+                    .font(headerFont)
+                    .foregroundStyle(Constants.Colors.backgroundGreen)
+            }
+            HStack {
+                Text("Kunmetaĵo")
+                Spacer()
+                Text(Bundle.main.buildNumber!)
+                    .font(headerFont)
+                    .foregroundStyle(Constants.Colors.backgroundGreen)
+            }
+            HStack {
+                Text("Vortkalkulo de leksikono")
+                Spacer()
+                Text(lexiconWordCount)
+                    .font(headerFont)
+                    .foregroundStyle(Constants.Colors.backgroundGreen)
+            }
+        }
+        .font(bodyFont)
+    }
+    
+    var starFooter: some View {
+        HStack {
+            Spacer()
+            Image("starLaunch", bundle: nil)
+                .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0))
+            Spacer()
+        }
     }
     
     func header(text: String) -> some View {
@@ -130,14 +161,15 @@ extension HomeScreen {
                 Circle()
                     .fill(.blue)
                     .frame(width: stepIconRadius, height: stepIconRadius)
-                    .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0 ))
+                    .padding(EdgeInsets(top: 0, leading: 12, bottom: 0, trailing: 0 ))
                 Text(String(number))
                     .font(Font.custom("Quicksand-Bold", size: stepIconRadius * 0.5))
                     .foregroundStyle(.white)
-                    .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0 ))
+                    .padding(EdgeInsets(top: 0, leading: 12, bottom: 0, trailing: 0 ))
             }
             Text(text)
                 .font(bodyFont)
+                .padding(EdgeInsets(top: 0, leading: 2, bottom: 0, trailing: 0))
         }
     }
     
@@ -153,7 +185,7 @@ extension HomeScreen {
             self.fontSize = fontSize
             self.stepIconRadius = stepIconRadius
         }
-
+        
         var body: some View {
             Button(action: openSettings) {
                 Label {
@@ -161,7 +193,7 @@ extension HomeScreen {
                         .font(Font.custom("Quicksand-Regular", size: fontSize))
                         .padding(EdgeInsets(top: 0, leading: 12, bottom: 0, trailing: 0 ))
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        
+                    
                 } icon: {
                     Image(systemName: "gear")
                         .resizable()
@@ -170,10 +202,10 @@ extension HomeScreen {
                         .foregroundColor(.white)
                 }
             }
-                .buttonStyle(.borderedProminent)
-                .frame(maxWidth: .infinity)
+            .buttonStyle(.borderedProminent)
+            .frame(maxWidth: .infinity)
         }
-
+        
         private func openSettings() {
             Analytics.logEvent("open_settings", parameters: [:])
             openURL(URL(string: UIApplication.openSettingsURLString)!)
