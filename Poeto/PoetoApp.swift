@@ -25,10 +25,11 @@ struct PoetoApp: App {
         WindowGroup {
             HomeScreen()
         }
-        .onChange(of: scenePhase) { _, newValue in
-            if newValue == .active {
-                
-            }
+        .onChange(of: scenePhase) { oldValue, newValue in
+            let from = String(describing: oldValue)
+            let to = String(describing: oldValue)
+            
+            Analytics.logEvent("lifecycle_transition", parameters: ["from":from, "to":to])
         }
     }
     

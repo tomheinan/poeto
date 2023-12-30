@@ -54,8 +54,6 @@ struct HomeScreen: View {
         UINavigationBar.appearance().standardAppearance = navAppearance
         UINavigationBar.appearance().compactAppearance = navAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = navAppearance
-        
-        print(Locale.current)
     }
     
     var body: some View {
