@@ -59,7 +59,13 @@ private extension EsperantoAutocompleteProvider {
         
         var remainingWords = 2
         for candidateItem in candidateItems {
-            suggestions.append(.init(text: candidateItem.word, subtitle: candidateItem.hintEnglish))
+            var suggestion: Autocomplete.Suggestion
+            if let showHints = Constants.AppGroup.sharedUserDefaults.value(forKey: Constants.Preferences.showHintsKey) as? Bool, showHints == true {
+                suggestion = .init(text: candidateItem.word, subtitle: candidateItem.hintEnglish)
+            } else {
+                suggestion = .init(text: candidateItem.word)
+            }
+            suggestions.append(suggestion)
             remainingWords -= 1
             if remainingWords <= 0 {
                 break

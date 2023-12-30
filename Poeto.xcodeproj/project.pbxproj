@@ -12,6 +12,14 @@
 		E2330E592B3E67AD00E3B8E5 /* String+IsCapitalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2330E582B3E67AD00E3B8E5 /* String+IsCapitalized.swift */; };
 		E2330E5A2B3E67AD00E3B8E5 /* String+IsCapitalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2330E582B3E67AD00E3B8E5 /* String+IsCapitalized.swift */; };
 		E2330E5D2B3E8BD700E3B8E5 /* Bundle+VersionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2330E5C2B3E8BD700E3B8E5 /* Bundle+VersionInfo.swift */; };
+		E2330E602B3F577A00E3B8E5 /* Color+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2330E5F2B3F577A00E3B8E5 /* Color+UIColor.swift */; };
+		E2330E612B3F589B00E3B8E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2626FAC2B30AF330020F59A /* Assets.xcassets */; };
+		E2330E682B3F5BA000E3B8E5 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2330E672B3F5BA000E3B8E5 /* Quicksand-Bold.ttf */; };
+		E2330E692B3F5BA000E3B8E5 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2330E672B3F5BA000E3B8E5 /* Quicksand-Bold.ttf */; };
+		E2330E6E2B3F607200E3B8E5 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2330E6D2B3F607200E3B8E5 /* HomeScreen.swift */; };
+		E2330E702B3F68D400E3B8E5 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2330E6F2B3F68D400E3B8E5 /* Settings.bundle */; };
+		E2330E722B3F7EEC00E3B8E5 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2330E712B3F7EEC00E3B8E5 /* Quicksand-Regular.ttf */; };
+		E2330E732B3F7EEC00E3B8E5 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2330E712B3F7EEC00E3B8E5 /* Quicksand-Regular.ttf */; };
 		E2579A752B3CBCDB002C853E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2579A742B3CBCDB002C853E /* GoogleService-Info.plist */; };
 		E2579A762B3CBCDB002C853E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2579A742B3CBCDB002C853E /* GoogleService-Info.plist */; };
 		E2579A772B3CBCDB002C853E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2579A742B3CBCDB002C853E /* GoogleService-Info.plist */; };
@@ -19,7 +27,6 @@
 		E2579A7C2B3CBE84002C853E /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = E2579A7B2B3CBE84002C853E /* FirebaseCrashlytics */; };
 		E2579A7E2B3CC2AA002C853E /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E2579A7D2B3CC2AA002C853E /* FirebaseAnalyticsSwift */; };
 		E2626FA92B30AF310020F59A /* PoetoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2626FA82B30AF310020F59A /* PoetoApp.swift */; };
-		E2626FAB2B30AF310020F59A /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2626FAA2B30AF310020F59A /* HomeScreen.swift */; };
 		E2626FAD2B30AF330020F59A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2626FAC2B30AF330020F59A /* Assets.xcassets */; };
 		E2626FB02B30AF330020F59A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2626FAF2B30AF330020F59A /* Preview Assets.xcassets */; };
 		E2626FBA2B30AF330020F59A /* PoetoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2626FB92B30AF330020F59A /* PoetoTests.swift */; };
@@ -35,7 +42,6 @@
 		E27C2E592B3216A200354D74 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E582B3216A200354D74 /* Constants.swift */; };
 		E27C2E5D2B3232EA00354D74 /* String+AsDiacriticalEquivalent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E5C2B3232EA00354D74 /* String+AsDiacriticalEquivalent.swift */; };
 		E27C2E5F2B3236BB00354D74 /* ActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E5E2B3236BB00354D74 /* ActionHandler.swift */; };
-		E27C2E632B35EFC300354D74 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E27C2E622B35EFC300354D74 /* Media.xcassets */; };
 		E27C2E652B391D9700354D74 /* KeyboardButton+DiacriticContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E642B391D9700354D74 /* KeyboardButton+DiacriticContent.swift */; };
 		E27C2E692B39301300354D74 /* Diacritics.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E682B39301300354D74 /* Diacritics.swift */; };
 		E27C2E6D2B3A230200354D74 /* CalloutActionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C2E6C2B3A230200354D74 /* CalloutActionProvider.swift */; };
@@ -89,12 +95,17 @@
 		E219444A2B3C9BFE00D63851 /* ReturnKeyType+EsperantoLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReturnKeyType+EsperantoLocalization.swift"; sourceTree = "<group>"; };
 		E2330E582B3E67AD00E3B8E5 /* String+IsCapitalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+IsCapitalized.swift"; sourceTree = "<group>"; };
 		E2330E5C2B3E8BD700E3B8E5 /* Bundle+VersionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+VersionInfo.swift"; sourceTree = "<group>"; };
+		E2330E5F2B3F577A00E3B8E5 /* Color+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+UIColor.swift"; sourceTree = "<group>"; };
+		E2330E652B3F5A6F00E3B8E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2330E672B3F5BA000E3B8E5 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		E2330E6D2B3F607200E3B8E5 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		E2330E6F2B3F68D400E3B8E5 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		E2330E712B3F7EEC00E3B8E5 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
 		E2579A742B3CBCDB002C853E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E2579A7F2B3D3374002C853E /* Poeto.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Poeto.entitlements; sourceTree = "<group>"; };
 		E2579A802B3D337D002C853E /* Klavaro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Klavaro.entitlements; sourceTree = "<group>"; };
 		E2626FA52B30AF310020F59A /* Poeto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poeto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2626FA82B30AF310020F59A /* PoetoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetoApp.swift; sourceTree = "<group>"; };
-		E2626FAA2B30AF310020F59A /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		E2626FAC2B30AF330020F59A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2626FAF2B30AF330020F59A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E2626FB52B30AF330020F59A /* PoetoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoetoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,7 +122,6 @@
 		E27C2E582B3216A200354D74 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E27C2E5C2B3232EA00354D74 /* String+AsDiacriticalEquivalent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AsDiacriticalEquivalent.swift"; sourceTree = "<group>"; };
 		E27C2E5E2B3236BB00354D74 /* ActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionHandler.swift; sourceTree = "<group>"; };
-		E27C2E622B35EFC300354D74 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		E27C2E642B391D9700354D74 /* KeyboardButton+DiacriticContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardButton+DiacriticContent.swift"; sourceTree = "<group>"; };
 		E27C2E682B39301300354D74 /* Diacritics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diacritics.swift; sourceTree = "<group>"; };
 		E27C2E6C2B3A230200354D74 /* CalloutActionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalloutActionProvider.swift; sourceTree = "<group>"; };
@@ -170,14 +180,24 @@
 			isa = PBXGroup;
 			children = (
 				E2330E5C2B3E8BD700E3B8E5 /* Bundle+VersionInfo.swift */,
+				E2330E5F2B3F577A00E3B8E5 /* Color+UIColor.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E2330E622B3F5A2500E3B8E5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E2330E712B3F7EEC00E3B8E5 /* Quicksand-Regular.ttf */,
+				E2330E672B3F5BA000E3B8E5 /* Quicksand-Bold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		E2579A852B3D34ED002C853E /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				E2626FAA2B30AF310020F59A /* HomeScreen.swift */,
+				E2330E6D2B3F607200E3B8E5 /* HomeScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -211,11 +231,12 @@
 			children = (
 				E2626FA82B30AF310020F59A /* PoetoApp.swift */,
 				E2579A852B3D34ED002C853E /* Screens */,
-				E2626FAC2B30AF330020F59A /* Assets.xcassets */,
-				E2579A742B3CBCDB002C853E /* GoogleService-Info.plist */,
-				E2579A7F2B3D3374002C853E /* Poeto.entitlements */,
 				E2626FAE2B30AF330020F59A /* Preview Content */,
 				E2330E5E2B3E8BDB00E3B8E5 /* Extensions */,
+				E2579A7F2B3D3374002C853E /* Poeto.entitlements */,
+				E2330E652B3F5A6F00E3B8E5 /* Info.plist */,
+				E2579A742B3CBCDB002C853E /* GoogleService-Info.plist */,
+				E2330E6F2B3F68D400E3B8E5 /* Settings.bundle */,
 			);
 			path = Poeto;
 			sourceTree = "<group>";
@@ -253,7 +274,6 @@
 				E27C2E712B3A308A00354D74 /* Providers */,
 				E27C2E722B3A309B00354D74 /* Handlers */,
 				E27C2E6E2B3A233E00354D74 /* Extensions */,
-				E27C2E622B35EFC300354D74 /* Media.xcassets */,
 				E2579A802B3D337D002C853E /* Klavaro.entitlements */,
 				E27C2E402B30B1DF00354D74 /* Info.plist */,
 			);
@@ -304,6 +324,8 @@
 				E28E62BA2B3DD40100253706 /* BridgingHeader.h */,
 				E28E62BD2B3DD66700253706 /* Lexicon.swift */,
 				E27C2E582B3216A200354D74 /* Constants.swift */,
+				E2626FAC2B30AF330020F59A /* Assets.xcassets */,
+				E2330E622B3F5A2500E3B8E5 /* Fonts */,
 				E2330E5B2B3E67B200E3B8E5 /* Extensions */,
 				E28E62CA2B3DEA5300253706 /* Resources */,
 			);
@@ -460,8 +482,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2626FB02B30AF330020F59A /* Preview Assets.xcassets in Resources */,
+				E2330E682B3F5BA000E3B8E5 /* Quicksand-Bold.ttf in Resources */,
+				E2330E722B3F7EEC00E3B8E5 /* Quicksand-Regular.ttf in Resources */,
 				E2626FAD2B30AF330020F59A /* Assets.xcassets in Resources */,
 				E2579A752B3CBCDB002C853E /* GoogleService-Info.plist in Resources */,
+				E2330E702B3F68D400E3B8E5 /* Settings.bundle in Resources */,
 				E28E62CC2B3DEA5300253706 /* poeto.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,7 +511,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E27C2E632B35EFC300354D74 /* Media.xcassets in Resources */,
+				E2330E612B3F589B00E3B8E5 /* Assets.xcassets in Resources */,
+				E2330E732B3F7EEC00E3B8E5 /* Quicksand-Regular.ttf in Resources */,
+				E2330E692B3F5BA000E3B8E5 /* Quicksand-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,11 +524,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2626FAB2B30AF310020F59A /* HomeScreen.swift in Sources */,
 				E2330E592B3E67AD00E3B8E5 /* String+IsCapitalized.swift in Sources */,
 				E2626FA92B30AF310020F59A /* PoetoApp.swift in Sources */,
 				E28E62C42B3DE04600253706 /* Lexicon.swift in Sources */,
 				E2330E5D2B3E8BD700E3B8E5 /* Bundle+VersionInfo.swift in Sources */,
+				E2330E6E2B3F607200E3B8E5 /* HomeScreen.swift in Sources */,
+				E2330E602B3F577A00E3B8E5 /* Color+UIColor.swift in Sources */,
 				E28E62C52B3DE09E00253706 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -698,11 +726,13 @@
 				DEVELOPMENT_TEAM = 9R4AQ377X3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Poeto/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -733,11 +763,13 @@
 				DEVELOPMENT_TEAM = 9R4AQ377X3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Poeto/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

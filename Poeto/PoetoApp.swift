@@ -17,6 +17,8 @@ struct PoetoApp: App {
     init() {
         FirebaseApp.configure()
         setUpLexicon()
+        setUpSettings()
+        setUpPreferences()
     }
     
     var body: some Scene {
@@ -33,10 +35,21 @@ struct PoetoApp: App {
     private func setUpLexicon() {
         Lexicon.setup()
         
-        if let appVersion = Bundle.main.releaseVersionNumber {
+        if let appVersion = Bundle.main.versionNumber {
             let wordCount = Lexicon.wordCount()
             print("Loaded Esperanto Lexicon v\(appVersion) (\(wordCount) words)")
             Analytics.logEvent("set_up_lexicon", parameters: ["version": appVersion, "word_count": wordCount])
+        }
+    }
+    
+    private func setUpSettings() {
+        UserDefaults.standard.set(Bundle.main.versionNumber, forKey: "versionPref")
+        UserDefaults.standard.set(Bundle.main.buildNumber, forKey: "buildPref")
+    }
+    
+    private func setUpPreferences() {
+        if Constants.AppGroup.sharedUserDefaults.value(forKey: Constants.Preferences.showHintsKey) == nil {
+            Constants.AppGroup.sharedUserDefaults.set(true, forKey: Constants.Preferences.showHintsKey)
         }
     }
 }
