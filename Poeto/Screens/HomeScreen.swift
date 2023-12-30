@@ -49,7 +49,15 @@ struct HomeScreen: View {
         GeometryReader { reader in
             NavigationView {
                 VStack(spacing: 0) {
-                    Rectangle().frame(height: reader.size.height/3).ignoresSafeArea()
+                    ZStack {
+                        Image("header", bundle: nil).resizable().aspectRatio(contentMode: .fill)
+                    }
+                    .frame(height: reader.size.height/3).ignoresSafeArea()
+                    .overlay(alignment: .bottomLeading) {
+                        Text("Poeto")
+                            .font(Font.custom("Quicksand-Bold", size: 36))
+                            .padding(EdgeInsets(top: 0, leading: 40, bottom: 70, trailing: 0))
+                    }
                     List {
                         if !keyboardState.isKeyboardEnabled {
                             onboardingSection
