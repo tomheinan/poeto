@@ -50,6 +50,7 @@ struct PoetoApp: App {
     private func setUpPreferences() {
         if Constants.AppGroup.sharedUserDefaults.value(forKey: Constants.Preferences.showHintsKey) == nil {
             Constants.AppGroup.sharedUserDefaults.set(true, forKey: Constants.Preferences.showHintsKey)
+            Analytics.logEvent("set_preference", parameters: ["key":"show_hints", "value":true])
         }
     }
 }

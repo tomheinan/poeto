@@ -7,6 +7,7 @@
 
 import KeyboardKit
 import SwiftUI
+import FirebaseAnalytics
 import FirebaseAnalyticsSwift
 
 struct HomeScreen: View {
@@ -92,6 +93,9 @@ extension HomeScreen {
     var settingsSection: some View {
         Section(header: header(text: "Preferoj")) {
             Toggle("Montru anglajn sugestojn", isOn: $showHints)
+                .onChange(of: showHints) {
+                    Analytics.logEvent("set_preference", parameters: ["key":"show_hints", "value":showHints])
+                }
         }
         .font(bodyFont)
     }
@@ -163,6 +167,7 @@ extension HomeScreen {
         }
 
         private func openSettings() {
+            Analytics.logEvent("open_settings", parameters: [:])
             openURL(URL(string: UIApplication.openSettingsURLString)!)
         }
     }
