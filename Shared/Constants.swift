@@ -25,6 +25,7 @@ struct Constants {
         static let primaryGreen = Color("primaryGreen", bundle: nil)
         static let secondaryGreen = Color("secondaryGreen", bundle: nil)
         static let backgroundGreen = Color("backgroundGreen", bundle: nil)
+        static let accentColor = Color("accentColor", bundle: nil)
         static let bodyText = Color("bodyText", bundle: nil)
         static let diacriticHint = Color("diacriticHint", bundle: nil)
     }

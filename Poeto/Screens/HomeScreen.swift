@@ -157,7 +157,7 @@ extension HomeScreen {
         HStack {
             ZStack {
                 Circle()
-                    .fill(.blue)
+                    .fill(Constants.Colors.accentColor)
                     .frame(width: stepIconRadius, height: stepIconRadius)
                     .padding(EdgeInsets(top: 0, leading: 12, bottom: 0, trailing: 0 ))
                 Text(String(number))
